@@ -2,12 +2,14 @@ const sliderText = document.querySelectorAll(".heading-subtext span");
 const heading = document.querySelector(".heading-subtext-wrapper");
 let topValue = -0;
 sliderText.forEach((text, index) => {
-  setTimeout(function () {
-    topValue -= 5;
-    heading.style.top = `${topValue}rem`;
-    // text.style.transform = "translateY(-2rem)";
-    text.style.opacity = 0.2;
-  }, index * 3000);
+  if (index !== sliderText.length - 1) {
+    setTimeout(function () {
+      topValue -= 5.2;
+      heading.style.top = `${topValue}rem`;
+      text.style.opacity = 0;
+      sliderText[index + 1].style.opacity = 1;
+    }, index * 3000);
+  }
 });
 
 const faqButtons = document.querySelectorAll(".faq-button");
@@ -69,6 +71,33 @@ window.addEventListener("scroll", () => {
     vids[0].style.display = "none";
     vids[1].style.display = "none";
   }
+});
+
+// Display Video
+const videos = document.querySelectorAll(".iframe");
+const videoBg = document.querySelectorAll(".iframe-inner");
+const iframes = document.querySelectorAll(".iframe-vid");
+
+vids.forEach((vid, index) => {
+  vid.addEventListener("click", () => {
+    videos[index].classList.add("block");
+    // videos[index].style.height = "100vh";
+    // videos[index].style.width = "100vw";
+  });
+});
+videoBg.forEach((bg, index) => {
+  bg.addEventListener("click", () => {
+    console.log(videos[index]);
+    // videos[index].classList.remove('block')
+    videos[index].style.display = "block";
+    if (iframes != null) {
+      for (var i = 0; i < iframes.length; i++) {
+        iframes[i].src = iframes[i].src; //causes a reload so it stops playing, music, video, etc.
+      }
+    }
+    // videos[index].style.height = "0";
+    // videos[index].style.width = "0";
+  });
 });
 
 //Timer
