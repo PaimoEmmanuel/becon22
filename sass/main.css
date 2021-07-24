@@ -253,7 +253,10 @@ $breakpoint arguments choices:
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
   margin-top: 7.75rem;
-  padding: 5.3125rem 13.625rem;
+  padding: 5.3125rem 13.625rem 1.875rem;
+}
+
+.countdown-figures {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,6 +266,15 @@ $breakpoint arguments choices:
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2.2rem;
+}
+
+.countdown-text {
+  text-align: center;
+}
+
+.countdown-text span {
+  font-weight: 600;
 }
 
 .countdown-big {
@@ -276,7 +288,7 @@ $breakpoint arguments choices:
   line-height: 4.0625rem;
 }
 
-.countdown span {
+.countdown-span {
   height: 3.8125rem;
   width: 0.5px;
   background-color: rgba(51, 51, 51, 0.3);

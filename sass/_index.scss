@@ -165,11 +165,19 @@
   background-color: rgba(#f8efde, 0.3);
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
   margin-top: 7.75rem;
-  padding: 5.3125rem 13.625rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5.3125rem 13.625rem 1.875rem;
+
+  &-figures {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.2rem;
+  }
   &-text {
+    text-align: center;
+    span {
+      font-weight: 600;
+    }
   }
   &-big {
     font-size: 3.4375rem;
@@ -180,7 +188,7 @@
     font-size: 1.25rem;
     line-height: 4.0625rem;
   }
-  span {
+  &-span {
     height: 3.8125rem;
     width: 0.5px;
     background-color: rgba(#333333, 0.3);

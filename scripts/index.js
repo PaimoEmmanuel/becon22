@@ -80,23 +80,21 @@ const iframes = document.querySelectorAll(".iframe-vid");
 
 vids.forEach((vid, index) => {
   vid.addEventListener("click", () => {
-    videos[index].classList.add("block");
-    // videos[index].style.height = "100vh";
-    // videos[index].style.width = "100vw";
+    videos[index].style.display = "block";
+    // videos[index].classList.remove('hidden')
   });
 });
+
 videoBg.forEach((bg, index) => {
   bg.addEventListener("click", () => {
     console.log(videos[index]);
-    // videos[index].classList.remove('block')
-    videos[index].style.display = "block";
+    videos[index].style.display = "none";
+    videos[index].classList.add('hidden')
     if (iframes != null) {
       for (var i = 0; i < iframes.length; i++) {
         iframes[i].src = iframes[i].src; //causes a reload so it stops playing, music, video, etc.
       }
     }
-    // videos[index].style.height = "0";
-    // videos[index].style.width = "0";
   });
 });
 
