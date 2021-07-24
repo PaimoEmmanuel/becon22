@@ -9,18 +9,32 @@ backPage.addEventListener("click", () => {
     translateValue += 100;
     uploadWrapper.forEach((item) => {
       item.style.transform = `translate(${translateValue}%)`;
+      item.style.position = 'relative';
     });
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 });
 uploadButton.forEach((item, index) => {
   item.addEventListener("click", () => {
-    if (translateValue < uploadWrapper.length * 100 && image[index].value) {
+    console.log(index, uploadWrapper.length - 1);
+     if (
+      translateValue < uploadWrapper.length * 100 &&
+      image[index].value
+    ) {
       translateValue -= 100;
       uploadWrapper.forEach((item) => {
         item.style.transform = `translate(${translateValue}%)`;
       });
       document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+    if (index === uploadWrapper.length - 2) {
+      // uploadWrapper[index].style.transform = "translate(0%)";
+      uploadWrapper.forEach((item) => {
+        item.style.position = `absolute`;
+      });
+      uploadWrapper[uploadWrapper.length-1].style.transition = "all 0s";
+      uploadWrapper[uploadWrapper.length-1].style.position = 'relative'
+      uploadWrapper[uploadWrapper.length-1].style.transform = "translate(0%)";
     }
   });
 });
@@ -43,6 +57,9 @@ modalBtn.addEventListener("click", () => {
     ].style.backgroundColor = "#a58543";
   }
   index++;
+  if (index > 2) {
+    modalBtn.innerHTML = "Yay! I’m ready";
+  }
 });
 
 const modalBg = document.querySelector(".modal-bg");

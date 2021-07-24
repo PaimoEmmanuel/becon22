@@ -244,6 +244,9 @@
         font-weight: 500;
         color: black;
         text-decoration: underline;
+        &:hover {
+          color: #C08B1D;
+        }
       }
     }
   }
@@ -564,7 +567,7 @@ $animationSpeed: 25s;
 .social-media {
   position: absolute;
   right: 3rem;
-  top: 3rem;
+  // top: 3rem;
   padding: 1.875rem;
   display: flex;
   background: #ffffff;
@@ -615,8 +618,12 @@ $animationSpeed: 25s;
     z-index: 9;
     opacity: 1;
     right: 0rem;
-    top: unset;
   }
+}
+.social-media-hover {
+  z-index: 9;
+  opacity: 1;
+  right: 0rem;
 }
 .iframe {
   position: fixed;

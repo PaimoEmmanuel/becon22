@@ -1,3 +1,15 @@
+let followBeconState = true;
+document.querySelector(".follow-becon").addEventListener("click", () => {
+  followBeconState
+    ? document
+        .querySelector(".social-media")
+        .classList.add("social-media-hover")
+    : document
+        .querySelector(".social-media")
+        .classList.remove("social-media-hover");
+  followBeconState = !followBeconState;
+});
+
 const sliderText = document.querySelectorAll(".heading-subtext span");
 const heading = document.querySelector(".heading-subtext-wrapper");
 let topValue = -0;
@@ -89,7 +101,7 @@ videoBg.forEach((bg, index) => {
   bg.addEventListener("click", () => {
     console.log(videos[index]);
     videos[index].style.display = "none";
-    videos[index].classList.add('hidden')
+    videos[index].classList.add("hidden");
     if (iframes != null) {
       for (var i = 0; i < iframes.length; i++) {
         iframes[i].src = iframes[i].src; //causes a reload so it stops playing, music, video, etc.

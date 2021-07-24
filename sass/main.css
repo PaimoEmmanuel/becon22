@@ -18,6 +18,12 @@ body {
 
 a {
   text-decoration: none;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 /*
@@ -359,6 +365,10 @@ $breakpoint arguments choices:
   font-weight: 500;
   color: black;
   text-decoration: underline;
+}
+
+.theme-wrapper p a:hover {
+  color: #C08B1D;
 }
 
 .dp {
@@ -760,7 +770,6 @@ $breakpoint arguments choices:
 .social-media {
   position: absolute;
   right: 3rem;
-  top: 3rem;
   padding: 1.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -824,7 +833,12 @@ $breakpoint arguments choices:
   z-index: 9;
   opacity: 1;
   right: 0rem;
-  top: unset;
+}
+
+.social-media-hover {
+  z-index: 9;
+  opacity: 1;
+  right: 0rem;
 }
 
 .iframe {
@@ -906,6 +920,32 @@ $breakpoint arguments choices:
   width: 23.4375rem;
   border-radius: 8px;
   padding: 1rem;
+  position: relative;
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+  /* For IE10 */
+}
+
+.upload-input::-ms-expand {
+  display: none;
+}
+
+.upload-select-wrapper {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.upload-svg {
+  position: absolute;
+  right: 1.625rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .upload-picture {
@@ -1036,8 +1076,8 @@ $breakpoint arguments choices:
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .modal-section img {
@@ -1073,6 +1113,10 @@ $breakpoint arguments choices:
   margin-top: 4.6875rem;
 }
 
+.modal-indicator {
+  margin-left: calc(45%);
+}
+
 .modal-indicator span {
   width: 13px;
   height: 13px;
@@ -1080,8 +1124,8 @@ $breakpoint arguments choices:
   border-radius: 50%;
   border: 1px solid #a58543;
   margin-right: 0.625rem;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .modal-indicator span:first-child {
@@ -1095,7 +1139,7 @@ $breakpoint arguments choices:
 .modal-btn {
   width: 7.875rem;
   height: 2.1875rem;
-  background-color: #C08B1D;
+  background-color: #c08b1d;
   border-radius: 50px;
   border: none;
   font-size: 0.875rem;
