@@ -62,14 +62,7 @@ modalBtn.addEventListener("click", () => {
   }
 });
 
-const modalBg = document.querySelector(".modal-bg");
-modalBg.addEventListener("click", () => {
+document.querySelector(".modal-button").addEventListener("click", () => {
   document.querySelector(".modal").style.display = "none";
 });
-// forwardPage.addEventListener("click", () => {
-//   translateValue -= 100;
-//   uploadWrapper.forEach((item) => {
-//     item.style.transform = `translate(${translateValue}%)`;
-//   });
-//   document.body.scrollTop = document.documentElement.scrollTop = 0;
-// });
+

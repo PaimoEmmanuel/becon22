@@ -78,7 +78,7 @@
     }
     span {
       display: inline-flex;
-      transition: all 3s;
+      transition: all 2s ease-in;
       opacity: 0.2;
       &:first-child {
         opacity: 1;
@@ -232,6 +232,7 @@
     img {
       margin-right: 3.4375rem;
       border-radius: 10px;
+      animation: MoveUpDown 2s ease-in-out infinite;
     }
     h3 {
       color: #c08b1d;
@@ -245,7 +246,7 @@
         color: black;
         text-decoration: underline;
         &:hover {
-          color: #C08B1D;
+          color: #c08b1d;
         }
       }
     }
@@ -267,6 +268,7 @@
   }
   img {
     margin-left: 7.625rem;
+    animation: MoveDownUp 2s ease-in-out infinite;
   }
 }
 .previous-themes {
@@ -389,7 +391,7 @@
     }
   }
   &-text {
-    max-width: 30rem;
+    max-width: 31rem;
     margin: auto;
     height: 100vh;
     min-height: 37.5rem;
@@ -437,21 +439,25 @@
   margin-top: 8.75rem;
   background-color: #f8efde;
   display: flex;
+  justify-content: space-between;
   padding: 6.25rem 3.125rem 0;
   h4 {
     font-size: 2.1875rem;
     line-height: 3rem;
     font-weight: 700;
     margin-bottom: 5rem;
+    max-width: 31.5625rem;
     span {
       color: #c08b1d;
     }
   }
   &-img {
-    margin-left: 9.75rem;
+    margin-left: 2rem;
   }
   &-link {
     margin-right: 2.875rem;
+    margin-bottom: 2rem;
+    display: inline-block;
   }
 }
 @keyframes blinker {
@@ -633,7 +639,7 @@ $animationSpeed: 25s;
   left: 0;
   top: 0;
   transition: all 0.3s;
-  display: none;
+  // display: none;
   &-inner {
     height: 100vh;
     width: 100vw;
@@ -646,8 +652,25 @@ $animationSpeed: 25s;
   }
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .block {
   display: block;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes MoveDownUp {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

@@ -149,8 +149,8 @@ $breakpoint arguments choices:
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-transition: all 3s;
-  transition: all 3s;
+  -webkit-transition: all 2s ease-in;
+  transition: all 2s ease-in;
   opacity: 0.2;
 }
 
@@ -349,6 +349,8 @@ $breakpoint arguments choices:
 .theme-wrapper img {
   margin-right: 3.4375rem;
   border-radius: 10px;
+  -webkit-animation: MoveUpDown 2s ease-in-out infinite;
+          animation: MoveUpDown 2s ease-in-out infinite;
 }
 
 .theme-wrapper h3 {
@@ -368,7 +370,7 @@ $breakpoint arguments choices:
 }
 
 .theme-wrapper p a:hover {
-  color: #C08B1D;
+  color: #c08b1d;
 }
 
 .dp {
@@ -392,6 +394,8 @@ $breakpoint arguments choices:
 
 .dp img {
   margin-left: 7.625rem;
+  -webkit-animation: MoveDownUp 2s ease-in-out infinite;
+          animation: MoveDownUp 2s ease-in-out infinite;
 }
 
 .previous-themes {
@@ -561,7 +565,7 @@ $breakpoint arguments choices:
 }
 
 .video-text {
-  max-width: 30rem;
+  max-width: 31rem;
   margin: auto;
   height: 100vh;
   min-height: 37.5rem;
@@ -624,6 +628,9 @@ $breakpoint arguments choices:
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 6.25rem 3.125rem 0;
 }
 
@@ -632,6 +639,7 @@ $breakpoint arguments choices:
   line-height: 3rem;
   font-weight: 700;
   margin-bottom: 5rem;
+  max-width: 31.5625rem;
 }
 
 .fs h4 span {
@@ -639,11 +647,13 @@ $breakpoint arguments choices:
 }
 
 .fs-img {
-  margin-left: 9.75rem;
+  margin-left: 2rem;
 }
 
 .fs-link {
   margin-right: 2.875rem;
+  margin-bottom: 2rem;
+  display: inline-block;
 }
 
 @-webkit-keyframes blinker {
@@ -850,7 +860,6 @@ $breakpoint arguments choices:
   top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  display: none;
 }
 
 .iframe-inner {
@@ -867,11 +876,55 @@ $breakpoint arguments choices:
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .block {
   display: block;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@-webkit-keyframes MoveDownUp {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes MoveDownUp {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }
 
 .header-gradient {
@@ -983,7 +1036,7 @@ $breakpoint arguments choices:
   font-size: 0.875rem;
   border: none;
   margin-top: 6.25rem;
-  margin-bottom: 16.4375rem;
+  margin-bottom: 10.1875rem;
 }
 
 .page-slide {
@@ -1038,6 +1091,15 @@ $breakpoint arguments choices:
   padding: 3.75rem;
   width: 60vw;
   min-width: 45rem;
+}
+
+.modal-button {
+  position: absolute;
+  right: 1.875rem;
+  top: 1.5625rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .modal-title {

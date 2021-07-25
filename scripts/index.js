@@ -20,7 +20,7 @@ sliderText.forEach((text, index) => {
       heading.style.top = `${topValue}rem`;
       text.style.opacity = 0;
       sliderText[index + 1].style.opacity = 1;
-    }, index * 3000);
+    }, index * 2000);
   }
 });
 
@@ -92,19 +92,14 @@ const iframes = document.querySelectorAll(".iframe-vid");
 
 vids.forEach((vid, index) => {
   vid.addEventListener("click", () => {
-    videos[index].style.display = "block";
-    // videos[index].classList.remove('hidden')
-  });
-});
-
-videoBg.forEach((bg, index) => {
-  bg.addEventListener("click", () => {
-    console.log(videos[index]);
-    videos[index].style.display = "none";
-    videos[index].classList.add("hidden");
-    if (iframes != null) {
-      for (var i = 0; i < iframes.length; i++) {
-        iframes[i].src = iframes[i].src; //causes a reload so it stops playing, music, video, etc.
+    if (videos[index].classList.contains("hidden")) {
+      videos[index].className = "iframe";
+    } else {
+      videos[index].className = "iframe hidden";
+      if (iframes != null) {
+        for (var i = 0; i < iframes.length; i++) {
+          iframes[i].src = iframes[i].src; //causes a reload so it stops playing, music, video, etc.
+        }
       }
     }
   });
@@ -112,7 +107,7 @@ videoBg.forEach((bg, index) => {
 
 //Timer
 
-var countDownDate = new Date("Aug 8, 2021 18:37:25").getTime();
+var countDownDate = new Date("Aug 8, 2021 00:00:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
