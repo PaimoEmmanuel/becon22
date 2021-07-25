@@ -9,6 +9,27 @@ document.querySelector(".follow-becon").addEventListener("click", () => {
         .classList.remove("social-media-hover");
   followBeconState = !followBeconState;
 });
+let followBeconMobileState = true;
+
+document.querySelector(".mobile-dropdwon").addEventListener("click", () => {
+  followBeconMobileState
+    ? document
+        .querySelector(".social-media")
+        .classList.add("social-media-hover")
+    : document
+        .querySelector(".social-media")
+        .classList.remove("social-media-hover");
+  followBeconMobileState = !followBeconMobileState;
+});
+
+document.querySelector('.mobile-nav-hamburger').addEventListener('click', () => {
+  document.querySelector(".mobile-nav-content-wrap").style.transform =
+    "translateX(0vw)";
+})
+document.querySelector(".mobile-nav-btn").addEventListener("click", () => {
+  document.querySelector(".mobile-nav-content-wrap").style.transform =
+    "translateX(100vw)";
+});
 
 const sliderText = document.querySelectorAll(".heading-subtext span");
 const heading = document.querySelector(".heading-subtext-wrapper");
