@@ -207,6 +207,8 @@ $breakpoint arguments choices:
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-height: 100vh;
+  overflow: scroll;
 }
 
 .mobile-nav-btn {
@@ -289,6 +291,12 @@ $breakpoint arguments choices:
   font-weight: 700;
 }
 
+@media only screen and (max-width: 75em) {
+  .heading h1 {
+    font-size: 2.75rem;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .heading h1 {
     font-size: 2.1875rem;
@@ -303,9 +311,16 @@ $breakpoint arguments choices:
   height: 5rem;
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 56.25em) {
   .heading-subtext {
     overflow: hidden;
+    height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-subtext {
+    height: 3.5rem;
   }
 }
 
@@ -530,7 +545,16 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 37.5em) {
   .countdown {
-    padding: 3rem 1rem;
+    padding: 3rem 0rem;
+    background-color: rgba(248, 239, 222, 0.7);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .countdown-bg {
+    background-color: rgba(248, 239, 222, 0.7);
   }
 }
 
@@ -1445,7 +1469,8 @@ $breakpoint arguments choices:
 }
 
 .hidden {
-  display: none !important;
+  -webkit-transform: scale(0) !important;
+          transform: scale(0) !important;
 }
 
 .block {
@@ -1525,6 +1550,26 @@ $breakpoint arguments choices:
   transition: all 0.3s;
 }
 
+.upload-wrapper .register {
+  display: block;
+  margin: 7.5rem auto 9.375rem auto;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .upload-wrapper .register {
+    margin: 4.5rem auto 5.375rem auto;
+    font-size: 1.5625rem;
+    line-height: 2.3125rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .upload-wrapper .register h3 {
+    font-size: 1.5625rem;
+    line-height: 2.3125rem;
+  }
+}
+
 .upload-step {
   font-size: 1.25rem;
   font-weight: 500;
@@ -1538,6 +1583,13 @@ $breakpoint arguments choices:
   font-size: 0.75rem;
   line-height: 1.125rem;
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .upload-direction {
+    max-width: 16.25rem;
+    margin: 0 auto 1rem;
+  }
 }
 
 .upload-input {
@@ -1556,6 +1608,12 @@ $breakpoint arguments choices:
 
 .upload-input::-ms-expand {
   display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .upload-input {
+    width: 100%;
+  }
 }
 
 .upload-select-wrapper {
@@ -1579,6 +1637,13 @@ $breakpoint arguments choices:
   width: 18.75rem;
   border: 1px solid #333333;
   margin: 2.25rem auto 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .upload-picture {
+    height: 13.75rem;
+    width: 13.75rem;
+  }
 }
 
 .upload input {
@@ -1612,6 +1677,12 @@ $breakpoint arguments choices:
   margin-bottom: 10.1875rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .upload-button {
+    margin-bottom: 2.1875rem;
+  }
+}
+
 .page-slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1620,6 +1691,12 @@ $breakpoint arguments choices:
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 15.625rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .page-slide {
+    margin-top: 10.625rem;
+  }
 }
 
 .page-slide button {
@@ -1651,6 +1728,8 @@ $breakpoint arguments choices:
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .modal-container {
@@ -1664,6 +1743,22 @@ $breakpoint arguments choices:
   padding: 3.75rem;
   width: 60vw;
   min-width: 45rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .modal-container {
+    min-width: 15rem;
+    width: 90vw;
+    max-height: 90vh;
+    min-height: 12.5rem;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .modal-container {
+    padding: 4rem 1.75rem;
+  }
 }
 
 .modal-button {
@@ -1715,9 +1810,31 @@ $breakpoint arguments choices:
   transition: all 0.3s;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .modal-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .modal-section img {
   width: 16.25rem;
   margin-right: 1.5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .modal-section img {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .modal-step-pointer {
+    display: none;
+  }
 }
 
 .modal-step {
@@ -1726,11 +1843,24 @@ $breakpoint arguments choices:
   font-family: "Sacramento", cursive;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .modal-step {
+    display: none;
+  }
+}
+
 .modal-details {
   font-size: 0.875rem;
   line-height: 1.625rem;
   margin: 0.25rem 2.5rem 0 1.5rem;
   max-width: 14.125rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .modal-details {
+    text-align: center;
+    margin-top: 1.25rem;
+  }
 }
 
 .modal-details span {
@@ -1748,8 +1878,27 @@ $breakpoint arguments choices:
   margin-top: 4.6875rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .modal-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .modal-indicator {
   margin-left: calc(45%);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .modal-indicator {
+    margin-left: 0;
+    margin-bottom: 1.875rem;
+  }
 }
 
 .modal-indicator span {

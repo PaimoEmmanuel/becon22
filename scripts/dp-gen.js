@@ -9,7 +9,7 @@ backPage.addEventListener("click", () => {
     translateValue += 100;
     uploadWrapper.forEach((item) => {
       item.style.transform = `translate(${translateValue}%)`;
-      item.style.position = 'relative';
+      item.style.position = "relative";
     });
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
@@ -17,10 +17,7 @@ backPage.addEventListener("click", () => {
 uploadButton.forEach((item, index) => {
   item.addEventListener("click", () => {
     console.log(index, uploadWrapper.length - 1);
-     if (
-      translateValue < uploadWrapper.length * 100 &&
-      image[index].value
-    ) {
+    if (translateValue < uploadWrapper.length * 100 && image[index].value) {
       translateValue -= 100;
       uploadWrapper.forEach((item) => {
         item.style.transform = `translate(${translateValue}%)`;
@@ -32,9 +29,9 @@ uploadButton.forEach((item, index) => {
       uploadWrapper.forEach((item) => {
         item.style.position = `absolute`;
       });
-      uploadWrapper[uploadWrapper.length-1].style.transition = "all 0s";
-      uploadWrapper[uploadWrapper.length-1].style.position = 'relative'
-      uploadWrapper[uploadWrapper.length-1].style.transform = "translate(0%)";
+      uploadWrapper[uploadWrapper.length - 1].style.transition = "all 0s";
+      uploadWrapper[uploadWrapper.length - 1].style.position = "relative";
+      uploadWrapper[uploadWrapper.length - 1].style.transform = "translate(0%)";
     }
   });
 });
@@ -45,8 +42,9 @@ const modalSection = document.querySelectorAll(".modal-section");
 let index = 1;
 let modalTransition = 0;
 modalBtn.addEventListener("click", () => {
+  document.querySelector('.modal-container').scrollTop = document.documentElement.scrollTop = 0;
   if (index >= 3) {
-    document.querySelector(".modal").style.display = "none";
+    document.querySelector(".modal").style.transform = "scale(0)";
   } else {
     modalTransition -= 100;
     modalSection.forEach((item) => {
@@ -63,6 +61,5 @@ modalBtn.addEventListener("click", () => {
 });
 
 document.querySelector(".modal-button").addEventListener("click", () => {
-  document.querySelector(".modal").style.display = "none";
+  document.querySelector(".modal").style.transform = "scale(0)";
 });
-
