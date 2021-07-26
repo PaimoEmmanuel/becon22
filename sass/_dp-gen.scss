@@ -27,6 +27,9 @@
         margin: 4.5rem auto 5.375rem auto;
         font-size: 1.5625rem;
         line-height: 2.3125rem;
+        max-width: 15.875rem;
+        margin-left: auto;
+        margin-right: auto;
       }
       h3 {
         @include respond(phone) {
@@ -53,6 +56,9 @@
       margin: 0 auto 1rem;
     }
   }
+  &-direction-b {
+    margin-top: 1rem;
+  }
   &-input {
     border: 1px solid #dadada;
     height: 3.4375rem;
@@ -69,7 +75,7 @@
       display: none;
     }
     @include respond(phone) {
-      width: 100%;
+      width: 20rem;
     }
   }
   &-select-wrapper {
@@ -120,10 +126,13 @@
     margin-top: 6.25rem;
     margin-bottom: 10.1875rem;
     &:disabled {
-      opacity: 0.7;
+      opacity: 0.4;
     }
     @include respond(tab-port) {
       margin-bottom: 2.1875rem;
+    }
+    @include respond(tab-port) {
+      margin-top: 3.25rem;
     }
   }
 }

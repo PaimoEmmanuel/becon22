@@ -1005,6 +1005,27 @@ $breakpoint arguments choices:
   margin-top: 3.5625rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .video-wrapper {
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .video-img-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
 .video-img {
   position: relative;
   -webkit-transition: all 0.2s;
@@ -1026,6 +1047,13 @@ $breakpoint arguments choices:
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .video-img img {
+    height: 50vh;
+    min-height: 20rem;
+  }
 }
 
 .video-img svg {
@@ -1054,6 +1082,14 @@ $breakpoint arguments choices:
           justify-content: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .video-text {
+    height: 50vh;
+    min-height: 20rem;
+    max-width: 90%;
+  }
+}
+
 .video-primary {
   color: #a58543;
   font-size: 3.4375rem;
@@ -1065,12 +1101,26 @@ $breakpoint arguments choices:
   font-weight: 700;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .video-primary {
+    font-size: 1.5625rem;
+    line-height: 2.1875rem;
+  }
+}
+
 .video-secondary {
   margin-top: 1.25rem;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 2.0625rem;
   color: white;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .video-secondary {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
 }
 
 .video-footer {
@@ -1471,6 +1521,12 @@ $breakpoint arguments choices:
           transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 37.5em) {
+  .iframe iframe {
+    width: 90%;
+  }
+}
+
 .hidden {
   display: none !important;
 }
@@ -1562,6 +1618,9 @@ $breakpoint arguments choices:
     margin: 4.5rem auto 5.375rem auto;
     font-size: 1.5625rem;
     line-height: 2.3125rem;
+    max-width: 15.875rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1594,6 +1653,10 @@ $breakpoint arguments choices:
   }
 }
 
+.upload-direction-b {
+  margin-top: 1rem;
+}
+
 .upload-input {
   border: 1px solid #dadada;
   height: 3.4375rem;
@@ -1614,7 +1677,7 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 37.5em) {
   .upload-input {
-    width: 100%;
+    width: 20rem;
   }
 }
 
@@ -1680,12 +1743,18 @@ $breakpoint arguments choices:
 }
 
 .upload-button:disabled {
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 @media only screen and (max-width: 56.25em) {
   .upload-button {
     margin-bottom: 2.1875rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .upload-button {
+    margin-top: 3.25rem;
   }
 }
 
