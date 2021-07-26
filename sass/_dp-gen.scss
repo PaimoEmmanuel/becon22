@@ -148,6 +148,9 @@
     border: none;
     display: flex;
     align-items: center;
+    a {
+      color: black;
+    }
     &:focus {
       outline: none;
     }
@@ -232,7 +235,7 @@
       flex-direction: column;
     }
     @include respond(phone) {
-      margin-top: 0rem;
+      margin-top: 1rem;
     }
     img {
       width: 16.25rem;
@@ -254,7 +257,8 @@
     font-size: 1.5625rem;
     font-family: "Sacramento", cursive;
     @include respond(tab-port) {
-      display: none;
+      text-align: center;
+      margin-left: 0;
     }
   }
   &-details {
@@ -264,7 +268,7 @@
     max-width: 14.125rem;
     @include respond(tab-port) {
       text-align: center;
-      margin-top: 1.25rem;
+      margin: 1.25rem 0 0 0;
     }
     span {
       color: #a58543;

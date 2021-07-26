@@ -298,28 +298,28 @@
       margin-top: 6rem;
       @include respond(tab-port) {
         margin-top: 0;
-        opacity: 0;
-        animation: unblinker 3s ease infinite;
+        // opacity: 0;
+        animation: blinker-4 8s ease infinite;
       }
     }
     &:nth-child(2) {
       display: none;
       @include respond(tab-port) {
         display: block;
-        animation: blinker 3s ease 3s infinite;
+        animation: blinker-3 8s ease infinite;
       }
     }
     &:nth-child(3) {
       display: none;
       @include respond(tab-port) {
         display: block;
-        animation: unblinker 3s ease 6s infinite;
+        animation: blinker-2 8s ease infinite;
       }
     }
     &:last-child {
       @include respond(tab-port) {
         // display: none;
-        animation: blinker 3s ease 6s infinite;
+        animation: blinker 8s ease infinite;
       }
     }
   }
@@ -825,18 +825,49 @@
   0% {
     opacity: 1;
   }
-  50% {
+  25% {
+    opacity: 0;
+  }
+  75% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
-@keyframes unblinker {
+@keyframes blinker-2 {
   0% {
-    opacity: 0;
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
   }
   50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blinker-3 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blinker-4 {
+  0% {
+    opacity: 1;
+  }
+  75% {
     opacity: 1;
   }
   100% {
