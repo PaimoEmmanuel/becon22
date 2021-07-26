@@ -4,14 +4,16 @@ let topValue = -0;
 sliderText.forEach((text, index) => {
   if (index !== sliderText.length - 1) {
     setTimeout(function () {
-      if (screen.width < 600) {
+      if (window.innerWidth < 600) {
         topValue -= 3.25;
-      } else if (600 < screen.width < 1200) {
+        console.log(window.innerWidth);
+      } else if (600 < window.innerWidth && window.innerWidth < 1200) {
         topValue -= 4.05;
-      } else {
+        console.log(window.innerWidth);
+      } else if (window.innerWidth > 1200) {
         topValue -= 5.2;
+        console.log(window.innerWidth);
       }
-      console.log(screen.width);
       heading.style.top = `${topValue}rem`;
       text.style.opacity = 0;
       sliderText[index + 1].style.opacity = 1;

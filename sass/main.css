@@ -18,12 +18,16 @@ body {
 
 a {
   text-decoration: none;
-  -webkit-transition: opacity .2s;
-  transition: opacity .2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 a:hover {
   opacity: 0.8;
+}
+
+button {
+  cursor: pointer;
 }
 
 /*
@@ -314,7 +318,6 @@ $breakpoint arguments choices:
 @media only screen and (max-width: 56.25em) {
   .heading-subtext {
     overflow: hidden;
-    height: 3rem;
   }
 }
 
@@ -451,7 +454,7 @@ $breakpoint arguments choices:
   }
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 56.25em) {
   .image-grid {
     position: relative;
     height: 30rem;
@@ -1469,8 +1472,7 @@ $breakpoint arguments choices:
 }
 
 .hidden {
-  -webkit-transform: scale(0) !important;
-          transform: scale(0) !important;
+  display: none !important;
 }
 
 .block {
@@ -1677,6 +1679,10 @@ $breakpoint arguments choices:
   margin-bottom: 10.1875rem;
 }
 
+.upload-button:disabled {
+  opacity: 0.7;
+}
+
 @media only screen and (max-width: 56.25em) {
   .upload-button {
     margin-bottom: 2.1875rem;
@@ -1819,6 +1825,12 @@ $breakpoint arguments choices:
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .modal-section {
+    margin-top: 0rem;
+  }
+}
+
 .modal-section img {
   width: 16.25rem;
   margin-right: 1.5rem;
@@ -1828,6 +1840,7 @@ $breakpoint arguments choices:
   .modal-section img {
     width: 100%;
     margin-right: 0;
+    display: none;
   }
 }
 
@@ -1887,6 +1900,12 @@ $breakpoint arguments choices:
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .modal-nav {
+    margin-top: 2rem;
   }
 }
 

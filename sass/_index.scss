@@ -173,7 +173,7 @@
     height: 5rem;
     @include respond(tab-port) {
       overflow: hidden;
-      height: 3rem;
+      // height: 3rem;
     }
     @include respond(phone) {
       height: 3.5rem;
@@ -272,7 +272,7 @@
   @include respond(tab-port) {
     grid-template-columns: repeat(1, 1fr);
   }
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     position: relative;
     height: 30rem;
   }
@@ -978,7 +978,7 @@ $animationSpeed: 25s;
   }
 }
 .hidden {
-  transform: scale(0) !important;
+  display: none !important;
 }
 .block {
   display: block;
