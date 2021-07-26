@@ -498,12 +498,40 @@ $breakpoint arguments choices:
 @media only screen and (max-width: 56.25em) {
   .image-grid-img:first-child {
     margin-top: 0;
+    opacity: 0;
+    -webkit-animation: unblinker 3s ease infinite;
+            animation: unblinker 3s ease infinite;
+  }
+}
+
+.image-grid-img:nth-child(2) {
+  display: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .image-grid-img:nth-child(2) {
+    display: block;
+    -webkit-animation: blinker 3s ease 3s infinite;
+            animation: blinker 3s ease 3s infinite;
+  }
+}
+
+.image-grid-img:nth-child(3) {
+  display: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .image-grid-img:nth-child(3) {
+    display: block;
+    -webkit-animation: unblinker 3s ease 6s infinite;
+            animation: unblinker 3s ease 6s infinite;
   }
 }
 
 @media only screen and (max-width: 56.25em) {
   .image-grid-img:last-child {
-    display: none;
+    -webkit-animation: blinker 3s ease 6s infinite;
+            animation: blinker 3s ease 6s infinite;
   }
 }
 
@@ -772,6 +800,13 @@ $breakpoint arguments choices:
   .dp p {
     font-size: 1.5625rem;
     line-height: 2.1875rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .dp a {
+    margin: 0 auto;
   }
 }
 
@@ -1262,19 +1297,49 @@ $breakpoint arguments choices:
 }
 
 @-webkit-keyframes blinker {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes blinker {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes unblinker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes unblinker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
