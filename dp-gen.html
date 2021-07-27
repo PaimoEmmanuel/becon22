@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/main.css">
+    <link rel="stylesheet" href="dpEngine/css/style.css">
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <title>BECON 2021</title>
 </head>
@@ -168,11 +169,20 @@
         <div class="upload-wrapper">
             <p class="upload-step">Step 1</p>
             <p class="upload-direction">Write your name in the box below (limit: 15 characters)</p>
-            <input class="upload-input" type="text" placeholder="Type in your name">
-            <div class="upload-picture"></div>
-            <input id="image_1" class="upload-image user-image" type="file">
-            <label class="upload-label" for="image_1">Choose an image</label>
-            <button class="upload-button" disabled>Upload & Proceed</button>
+            <input id="input_text_1" class="upload-input" type="text" maxlength="15" placeholder="Type in your name" required >
+            <p id="error_paragraph" class="upload-direction" style="color: red; display: none;">Please, insert your name above</p>
+            <div class="image-editor-1">
+                <div>
+                    <div class="cropit-preview"></div>
+                    <div class="image-size-label">Resize image</div>
+                    <input type="range" class="cropit-image-zoom-input" />
+                    <input id="image_1" class="upload-image user-image cropit-image-input" type="file">
+                    <label class="upload-label" for="image_1" style="cursor: pointer">Choose an image</label>
+                    <input type="hidden" name="image-data" class="hidden-image-data" />
+                </div>
+                <button id="btn_upload_1" class="upload-button" disabled>Upload & Proceed</button>
+            </div>
+            <!-- <div class="upload-picture"></div> -->
         </div>
         <div class="upload-wrapper">
             <p class="upload-step">Step 2</p>
@@ -180,11 +190,11 @@
                 towards BECON (You can only select one)</p>
             <div class="upload-select-wrapper">
 
-                <select name="" id="" class="upload-input">
-                    <option value="">I am excited!</option>
-                    <option value="">I am expectant!</option>
-                    <option value="">I am prayerful!</option>
-                    <option value="">I am hopeful!</option>
+                <select name="" id="input_text_2" class="upload-input">
+                    <option value="I am excited">I am excited!</option>
+                    <option value="I am expectant">I am expectant!</option>
+                    <option value="I am prayerful">I am prayerful!</option>
+                    <option value="I am hopeful">I am hopeful!</option>
                 </select>
                 <svg class="upload-svg" width="16" height="7" viewBox="0 0 16 7" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -192,27 +202,41 @@
                         stroke-linejoin="round" />
                 </svg>
             </div>
-            <div class="upload-picture"></div>
-            <input id="image_2" class="upload-image user-image" type="file">
-            <label class="upload-label" for="image_2">Choose an image</label>
-            <p class="upload-direction upload-direction-b">*Please upload a photo that shows the feeling
-                you selected above. God bless you</p>
-            <button class="upload-button" disabled>Upload & Proceed</button>
+            <div class="image-editor-2">
+                <div>
+                    <div class="cropit-preview"></div>
+                    <div class="image-size-label">Resize image</div>
+                    <input type="range" class="cropit-image-zoom-input" />
+                    <input id="image_2" class="upload-image user-image cropit-image-input" type="file">
+                    <label class="upload-label" for="image_2" style="cursor: pointer">Choose an image</label>
+                    <input type="hidden" name="image-data" class="hidden-image-data" />
+                    <p class="upload-direction upload-direction-b">*Please upload a photo that shows the feeling
+                        you selected above. God bless you</p>
+                </div>
+                <button id="btn_upload_2" class="upload-button" disabled>Upload & Proceed</button>
+            </div>
         </div>
         <div class="upload-wrapper">
             <p class="upload-step">Step 3</p>
             <p class="upload-direction">Last one, I promise! Please upload a nice
                 photo of you here also!</p>
             <!-- <input class="upload-input" type="text" placeholder="Type in your name"> -->
-            <div class="upload-picture"></div>
-            <input id="image_3" class="upload-image user-image" type="file">
-            <label class="upload-label" for="image_3">Choose an image</label>
-            <button class="upload-button" disabled>Upload & Proceed</button>
+            <div class="image-editor-3">
+                <div>
+                    <div class="cropit-preview"></div>
+                    <div class="image-size-label">Resize image</div>
+                    <input type="range" class="cropit-image-zoom-input" />
+                    <input id="image_3" class="upload-image user-image cropit-image-input" type="file">
+                    <label class="upload-label" for="image_3" style="cursor: pointer">Choose an image</label>
+                    <input type="hidden" name="image-data" class="hidden-image-data" />
+                </div>
+                <button id="btn_upload_3" class="upload-button" disabled>Upload & Proceed</button>
+            </div>
         </div>
         <div class="upload-wrapper">
             <div class="register">
                 <h3>Do the work of an Evangelist,
-                    share your DP far & wide</h3>
+                    share your Video far & wide</h3>
                 <a class="heading-links-a" href="https://events.egfm.org/">Download my video</a>
 
             </div>
@@ -270,6 +294,9 @@
             <h3 class="modal-title">Welcome Brethren</h3>
             <p class="modal-desc">...before you proceed please read the
                 instructions below</p>
+            <p style="font-family: Autography; visibility: hidden">
+                t
+            </p>
             <div class="modal-flex">
                 <div class="modal-section">
                     <img src="./images/dp.png" alt="">
@@ -348,5 +375,19 @@
 <script src="./scripts/dp-gen.js"></script>
 <script src="scripts/nav.js"></script>
 
+<script src="dpEngine/js/jquery.min.js"></script>
+<script src="dpEngine/js/jquery.cropit.js"></script>
+<script src="dpEngine/js/main.js?v=1.7"></script>
 
+<script>
+    let imageList = ["", "", ""];
+
+    function getImageArray() {
+      return imageList;
+    }
+    function setImageArray(newImageArray) {
+        imageList = newImageArray;
+    //   console.log(imageList)
+    }
+  </script>
 </html>

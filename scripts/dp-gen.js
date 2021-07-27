@@ -28,7 +28,11 @@ images.forEach((image, index) => {
 
 uploadButton.forEach((item, index) => {
   item.addEventListener("click", () => {
-    console.log(index, uploadWrapper.length - 1);
+    // console.log(index, uploadWrapper.length - 1);
+    // console.log($(`#input_text_${index+1}`).val())
+    if($(`#input_text_${index+1}`).val()==""){
+      return;
+    }
     if (translateValue < uploadWrapper.length * 100) {
       translateValue -= 100;
       uploadWrapper.forEach((item) => {
