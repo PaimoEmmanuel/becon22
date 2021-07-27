@@ -93,6 +93,12 @@ $breakpoint arguments choices:
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .nav {
+    padding-top: 0.875rem;
+  }
+}
+
 .nav-logo {
   margin-right: 4.375rem;
 }
@@ -1843,41 +1849,15 @@ $breakpoint arguments choices:
           transform: translateY(-50%);
 }
 
-.cropit-preview {
+.upload-picture {
   height: 18.75rem;
   width: 18.75rem;
   border: 1px solid #333333;
   margin: 2.25rem auto 1rem;
-  border-radius: 50%;
-  background-size: cover;
-
-  /* border: 1px #ccc;
-  border: dashed 1px; */
-  /* width: 250px;
-  height: 250px; */
-}
-
-.cropit-preview-image-container {
-  cursor: move;
-  border-radius: 50%;
-}
-
-.image-size-label {
-  margin-top: 10px;
-  color: #000;
-  /* margin-left: 20%; */
-}
-
-.upload-label:hover {
-  opacity: 0.8;
-}
-
-.upload-button:hover {
-  opacity: 0.8;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .cropit-preview {
+  .upload-picture {
     height: 13.75rem;
     width: 13.75rem;
   }

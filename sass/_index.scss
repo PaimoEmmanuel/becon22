@@ -27,8 +27,8 @@
     background-color: white;
     z-index: 999999;
   }
-  @include respond(tab-port) {
-    // margin-top: 1.875rem;
+  @include respond(phone) {
+    padding-top: 0.875rem;
   }
   &-logo {
     margin-right: 4.375rem;
