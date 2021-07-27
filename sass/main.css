@@ -1874,8 +1874,8 @@ $breakpoint arguments choices:
   margin: 2.25rem auto 1rem;
 }
 .cropit-preview {
-  height: 18.75rem;
-  width: 18.75rem;
+  height: 24rem;
+  width: 24rem;
   border: 1px solid #333333;
   margin: 2.25rem auto 1rem;
   border-radius: 50%;
@@ -1904,8 +1904,8 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 37.5em) {
   .cropit-preview {
-    height: 13.75rem;
-    width: 13.75rem;
+    height: 16rem;
+    width: 16rem;
   }
   .upload-picture {
     height: 13.75rem;
