@@ -920,7 +920,7 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 37.5em) {
   .previous-themes-textbox {
-    width: 95%;
+    width: 70vw;
   }
 }
 

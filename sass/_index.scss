@@ -578,7 +578,7 @@
     flex-direction: column;
     justify-content: center;
     @include respond(phone) {
-      width: 95%;
+      width: 70vw;
     }
     &-primary {
       font-size: 1.25rem;
