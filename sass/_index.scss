@@ -19,9 +19,16 @@
   margin-top: 3.125rem;
   @include respond(tab-land) {
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 1.875rem;
+    background-color: white;
+    z-index: 999999;
   }
   @include respond(tab-port) {
-    margin-top: 1.875rem;
+    // margin-top: 1.875rem;
   }
   &-logo {
     margin-right: 4.375rem;
@@ -103,6 +110,10 @@
     flex-direction: column;
     max-height: 100vh;
     overflow: scroll;
+    .social-media-hover {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   &-btn {
     background: none;
@@ -508,6 +519,7 @@
   }
   img {
     margin-left: 7.625rem;
+    width: 25.6875rem;
     animation: MoveDownUp 2s ease-in-out infinite;
     @include respond(tab-land) {
       margin-left: 0;
@@ -758,7 +770,7 @@
       margin: 3.125rem auto 0;
       background-color: white;
       color: black;
-      @include respond(phone) {
+      @include respond(tab-land) {
         display: flex;
       }
     }
@@ -980,6 +992,9 @@ $animationSpeed: 25s;
     animation: scroll $animationSpeed linear infinite;
     display: flex;
     width: calc(240px * 14);
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 }
 .social-media {
@@ -992,6 +1007,7 @@ $animationSpeed: 25s;
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   opacity: 0;
+  visibility: hidden;
   z-index: 0;
   transition: all 0.3s;
   @include respond(phone) {
@@ -1045,12 +1061,14 @@ $animationSpeed: 25s;
     z-index: 9;
     opacity: 1;
     right: 0rem;
+    visibility: visible;
   }
 }
 .social-media-hover {
   z-index: 9;
   opacity: 1;
   right: 0rem;
+  visibility: visible;
 }
 .iframe {
   position: fixed;
