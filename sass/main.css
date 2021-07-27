@@ -222,10 +222,16 @@ $breakpoint arguments choices:
   overflow: scroll;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .mobile-nav-content .social-media {
+    right: 50%;
+  }
+}
+
 .mobile-nav-content .social-media-hover {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .mobile-nav-btn {
@@ -1571,6 +1577,9 @@ $breakpoint arguments choices:
   z-index: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -1648,6 +1657,14 @@ $breakpoint arguments choices:
   opacity: 1;
   right: 0rem;
   visibility: visible;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .social-media-hover {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
 }
 
 .iframe {
