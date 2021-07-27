@@ -35,13 +35,13 @@ $(function () {
   }
 
   function processImage () {
-    register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3>`);
+    register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>0% done</h3>`);
     const text1 = $(`#input_text_1`).val()
     const text2 = $(`#input_text_2`).val()
     // name, y, x
-    const textData1 = [`${text1}`, 473, 595];
+    const textData1 = [`${text1}`, 485, 596];
     // name, y, x
-    const textData2 = [`${text2}`, 412, 587];
+    const textData2 = [`${text2}`, 433, 587];
 
     // button.attr("disabled", "disabled").html("...processing");
 
@@ -69,8 +69,10 @@ $(function () {
             setImageArray(images);
   
             if(index == 0){
+              register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>30% done</h3>`);
               createDP(1,images[1], picData, textData2, genericCb);
             }else{
+              register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>60% done</h3>`);
               createDP(2,images[2], picData, "", genericCb);
             }
           },
@@ -91,6 +93,7 @@ $(function () {
           images[index] = result.public_id;
           setImageArray(images);
 
+          register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>90% done</h3>`);
           navigateTo("yourdp", createHTMLForImage(url));
         },
         error: function (xhr, status, error) {

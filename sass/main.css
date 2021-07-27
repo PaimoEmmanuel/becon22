@@ -1832,7 +1832,7 @@ $breakpoint arguments choices:
   width: 18.75rem;
   border: 1px solid #333333;
   margin: 2.25rem auto 1rem;
-  border-radius: 3px;
+  border-radius: 50%;
   background-size: cover;
 
   /* border: 1px #ccc;
@@ -1843,6 +1843,7 @@ $breakpoint arguments choices:
 
 .cropit-preview-image-container {
   cursor: move;
+  border-radius: 50%;
 }
 
 .image-size-label {
