@@ -159,6 +159,7 @@
 .heading {
   padding-top: 6.25rem;
   overflow: hidden;
+  margin-top: 3rem;
 
   @include respond(tab-port) {
     padding-top: 4.25rem;
@@ -562,7 +563,7 @@
       object-fit: cover;
       @include respond(phone) {
         height: 13.125rem;
-        width: 95%;
+        width: 70vw;
       }
     }
   }
@@ -577,7 +578,7 @@
     flex-direction: column;
     justify-content: center;
     @include respond(phone) {
-      width: 95%;
+      width: 70vw;
     }
     &-primary {
       font-size: 1.25rem;
@@ -680,7 +681,7 @@
   &-img-wrapper {
     @include respond(tab-port) {
       position: sticky;
-      top: 0;
+      top: 5rem;
     }
   }
   &-img {
@@ -699,7 +700,7 @@
       width: 100%;
       object-fit: cover;
       @include respond(tab-port) {
-        height: 50vh;
+        height: 47vh;
         min-height: 20rem;
       }
     }

@@ -289,6 +289,7 @@ $breakpoint arguments choices:
 .heading {
   padding-top: 6.25rem;
   overflow: hidden;
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -893,7 +894,7 @@ $breakpoint arguments choices:
 @media only screen and (max-width: 37.5em) {
   .previous-themes-wrapper img {
     height: 13.125rem;
-    width: 95%;
+    width: 70vw;
   }
 }
 
@@ -919,7 +920,7 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 37.5em) {
   .previous-themes-textbox {
-    width: 95%;
+    width: 70vw;
   }
 }
 
@@ -1070,7 +1071,7 @@ $breakpoint arguments choices:
   .video-img-wrapper {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 5rem;
   }
 }
 
@@ -1099,7 +1100,7 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 56.25em) {
   .video-img img {
-    height: 50vh;
+    height: 47vh;
     min-height: 20rem;
   }
 }
