@@ -563,7 +563,7 @@
       object-fit: cover;
       @include respond(phone) {
         height: 13.125rem;
-        width: 95%;
+        width: 70vw;
       }
     }
   }
@@ -681,7 +681,7 @@
   &-img-wrapper {
     @include respond(tab-port) {
       position: sticky;
-      top: 0;
+      top: 5rem;
     }
   }
   &-img {
@@ -700,7 +700,7 @@
       width: 100%;
       object-fit: cover;
       @include respond(tab-port) {
-        height: 50vh;
+        height: 47vh;
         min-height: 20rem;
       }
     }
