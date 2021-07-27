@@ -159,6 +159,7 @@
 .heading {
   padding-top: 6.25rem;
   overflow: hidden;
+  margin-top: 3rem;
 
   @include respond(tab-port) {
     padding-top: 4.25rem;
