@@ -83,12 +83,19 @@ $breakpoint arguments choices:
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 1.875rem;
+    background-color: white;
+    z-index: 999999;
   }
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .nav {
-    margin-top: 1.875rem;
+    padding-top: 0.875rem;
   }
 }
 
@@ -213,6 +220,12 @@ $breakpoint arguments choices:
           flex-direction: column;
   max-height: 100vh;
   overflow: scroll;
+}
+
+.mobile-nav-content .social-media-hover {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .mobile-nav-btn {
@@ -811,6 +824,7 @@ $breakpoint arguments choices:
 
 .dp img {
   margin-left: 7.625rem;
+  width: 25.6875rem;
   -webkit-animation: MoveDownUp 2s ease-in-out infinite;
           animation: MoveDownUp 2s ease-in-out infinite;
 }
@@ -1186,7 +1200,7 @@ $breakpoint arguments choices:
   color: black;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 75em) {
   .video-footer a {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1535,6 +1549,11 @@ $breakpoint arguments choices:
   width: calc(240px * 14);
 }
 
+.slider .slide-track:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .social-media {
   position: absolute;
   right: 3rem;
@@ -1547,6 +1566,7 @@ $breakpoint arguments choices:
           box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   opacity: 0;
+  visibility: hidden;
   z-index: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1619,12 +1639,14 @@ $breakpoint arguments choices:
   z-index: 9;
   opacity: 1;
   right: 0rem;
+  visibility: visible;
 }
 
 .social-media-hover {
   z-index: 9;
   opacity: 1;
   right: 0rem;
+  visibility: visible;
 }
 
 .iframe {
@@ -1827,41 +1849,15 @@ $breakpoint arguments choices:
           transform: translateY(-50%);
 }
 
-.cropit-preview {
+.upload-picture {
   height: 18.75rem;
   width: 18.75rem;
   border: 1px solid #333333;
   margin: 2.25rem auto 1rem;
-  border-radius: 50%;
-  background-size: cover;
-
-  /* border: 1px #ccc;
-  border: dashed 1px; */
-  /* width: 250px;
-  height: 250px; */
-}
-
-.cropit-preview-image-container {
-  cursor: move;
-  border-radius: 50%;
-}
-
-.image-size-label {
-  margin-top: 10px;
-  color: #000;
-  /* margin-left: 20%; */
-}
-
-.upload-label:hover {
-  opacity: 0.8;
-}
-
-.upload-button:hover {
-  opacity: 0.8;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .cropit-preview {
+  .upload-picture {
     height: 13.75rem;
     width: 13.75rem;
   }
