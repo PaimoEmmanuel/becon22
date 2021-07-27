@@ -32,3 +32,9 @@ document.querySelector(".mobile-nav-btn").addEventListener("click", () => {
   document.querySelector(".mobile-nav-content-wrap").style.transform =
     "translateX(100vw)";
 });
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector(".mobile-nav-content-wrap").style.transform =
+    "translateX(100vw)";
+  })
+})
