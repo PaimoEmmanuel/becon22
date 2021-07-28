@@ -320,3 +320,40 @@
     cursor: pointer;
   }
 }
+
+
+.cropit-preview {
+  height: 24rem;
+  width: 24rem;
+  border: 1px solid #333333;
+  margin: 2.25rem auto 1rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.cropit-preview-image-container {
+  cursor: move;
+  border-radius: 50%;
+}
+
+.image-size-label {
+  margin-top: 10px;
+  color: #000;
+  /* margin-left: 20%; */
+}
+
+.upload-label:hover {
+  opacity: 0.8;
+}
+
+.upload-button:hover {
+  opacity: 0.8;
+}
+
+
+@media only screen and (max-width: 37.5em) {
+  .cropit-preview {
+    height: 16rem;
+    width: 16rem;
+  }
+}
