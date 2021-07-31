@@ -11,3 +11,8 @@ document.getElementById("minister_text_2").addEventListener("input", (e) => {
     ? (document.getElementById("minister_btn_upload").disabled = false)
     : (document.getElementById("minister_btn_upload").disabled = true);
 });
+document.getElementById("minister_btn_upload").addEventListener('click', () => {
+  document.querySelectorAll('.upload-wrapper').forEach((wrapper, index) => {
+    wrapper.style.transform = 'translate(-100%)'
+  })
+})
