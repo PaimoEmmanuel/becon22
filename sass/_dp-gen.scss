@@ -55,6 +55,9 @@
       max-width: 16.25rem;
       margin: 0 auto 1rem;
     }
+    &-2 {
+      margin-top: 3.75rem;
+    }
   }
   &-direction-b {
     margin-top: 1rem;
@@ -116,6 +119,26 @@
     padding: 0.25rem;
   }
   &-button {
+    width: 13.875rem;
+    height: 2.9375rem;
+    background-color: #c08b1d;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 0.875rem;
+    border: none;
+    margin-top: 6.25rem;
+    margin-bottom: 10.1875rem;
+    &:disabled {
+      opacity: 0.4;
+    }
+    @include respond(tab-port) {
+      margin-bottom: 2.1875rem;
+    }
+    @include respond(tab-port) {
+      margin-top: 3.25rem;
+    }
+  }
+  &-button-minister {
     width: 13.875rem;
     height: 2.9375rem;
     background-color: #c08b1d;

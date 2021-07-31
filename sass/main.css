@@ -1823,6 +1823,10 @@ $breakpoint arguments choices:
   }
 }
 
+.upload-direction-2 {
+  margin-top: 3.75rem;
+}
+
 .upload-direction-b {
   margin-top: 1rem;
 }
@@ -1924,6 +1928,34 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 56.25em) {
   .upload-button {
+    margin-top: 3.25rem;
+  }
+}
+
+.upload-button-minister {
+  width: 13.875rem;
+  height: 2.9375rem;
+  background-color: #c08b1d;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.875rem;
+  border: none;
+  margin-top: 6.25rem;
+  margin-bottom: 10.1875rem;
+}
+
+.upload-button-minister:disabled {
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .upload-button-minister {
+    margin-bottom: 2.1875rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .upload-button-minister {
     margin-top: 3.25rem;
   }
 }
