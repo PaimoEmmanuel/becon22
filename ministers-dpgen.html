@@ -170,14 +170,14 @@
         <div class="upload-wrapper">
             <p class="upload-step"></p>
             <p class="upload-direction">Please type the name of the minister here</p>
-            <input id="minister_text_1" class="upload-input" type="text" maxlength="15" placeholder="Type in your name"
+            <input id="minister_text_1" class="upload-input" type="text" maxlength="30" placeholder="Type in your name"
                 required>
-            <p id="error_paragraph" class="upload-direction" style="color: red; display: none;">Please insert the name of the minister above</p>
+            <p id="error_paragraph_1" class="upload-direction" style="color: red; display: none;">Please insert the name of the minister above</p>
 
             <p class="upload-direction upload-direction-2">Please type your own name here</p>
-            <input id="minister_text_2" class="upload-input" type="text" maxlength="15" placeholder="Type in your name"
+            <input id="minister_text_2" class="upload-input" type="text" maxlength="30" placeholder="Type in your name"
                 required>
-            <p id="error_paragraph" class="upload-direction" style="color: red; display: none;">Please, insert your name
+            <p id="error_paragraph_2S" class="upload-direction" style="color: red; display: none;">Please, insert your name
                 above</p>
             <div class="image-editor-1">
                 <button id="minister_btn_upload" class="upload-button-minister" disabled>Upload & Proceed</button>
@@ -189,7 +189,7 @@
             <div class="register">
                 <h3>Download and share the invite
                     with the minister </h3>
-                <a class="heading-links-a" href="https://events.egfm.org/">Download my video</a>
+                <a class="heading-links-a" href="https://events.egfm.org/">Download invite</a>
 
             </div>
         </div>
@@ -209,6 +209,12 @@
                         <img src="./images/playstore.png" alt="">
                     </a>
                 </div>
+                <p style="font-family: Montserrat-ExtraBold; visibility: hidden">
+                    t
+                </p>
+                <p style="font-family: Montserrat-Regular; visibility: hidden">
+                    t
+                </p>
             </div>
             <img class="fs-img" src="./images/fountain-stream.png" alt="">
         </div>
@@ -324,24 +330,11 @@
             Copyright © 2021 Eternal Glorious Fountain Ministry. All Rights Reserved</p>
     </div>
 </body>
-<script src="./scripts/dp-gen.js"></script>
+<!-- <script src="./scripts/dp-gen.js"></script> -->
 <script src="./scripts/ministers.js"></script>
 <script src="scripts/nav.js"></script>
 
 <script src="dpEngine/js/jquery.min.js"></script>
-<script src="dpEngine/js/jquery.cropit.js"></script>
-<script src="dpEngine/js/main.js?v=1.7"></script>
-
-<script>
-    let imageList = ["", "", ""];
-
-    function getImageArray() {
-        return imageList;
-    }
-    function setImageArray(newImageArray) {
-        imageList = newImageArray;
-        //   console.log(imageList)
-    }
-</script>
+<script src="dpEngine/js/minister.js"></script>
 
 </html>

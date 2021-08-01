@@ -19,11 +19,16 @@
 }
 
 /* Montserrat */
-/* Bold */
-/* @font-face {
-  font-family: "Montserrat-Bold";
-  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
-} */
+/* ExtraBold */
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.ttf");
+}
+/* Regular */
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
 
 /* Muli */
 /* Bold */
