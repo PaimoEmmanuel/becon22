@@ -35,7 +35,7 @@ $(function () {
         return `
           <h3>Download and share the invite
             with the minister</h3>
-          <a class="heading-links-a" href="${url}" download="BECON_INVITE_${text1.replace(/\./g, "")}">Download Image</a>
+          <a class="heading-links-a" href="${url}" download="BECON_INVITE_${text1.replace(/\./g, "")}">Download e-invite</a>
         `;
       }
     });

@@ -1753,6 +1753,16 @@ $breakpoint arguments choices:
   }
 }
 
+.minister-invite {
+  max-width: 25.625rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .minister-invite {
+    max-width: unset;
+  }
+}
+
 .header-gradient {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.13%, #f8efde), to(rgba(248, 239, 222, 0)));
   background: linear-gradient(180deg, #f8efde 14.13%, rgba(248, 239, 222, 0) 100%);
