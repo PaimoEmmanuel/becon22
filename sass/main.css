@@ -1753,6 +1753,16 @@ $breakpoint arguments choices:
   }
 }
 
+.minister-invite {
+  max-width: 25.625rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .minister-invite {
+    max-width: unset;
+  }
+}
+
 .header-gradient {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(14.13%, #f8efde), to(rgba(248, 239, 222, 0)));
   background: linear-gradient(180deg, #f8efde 14.13%, rgba(248, 239, 222, 0) 100%);
@@ -1823,6 +1833,10 @@ $breakpoint arguments choices:
   }
 }
 
+.upload-direction-2 {
+  margin-top: 3.75rem;
+}
+
 .upload-direction-b {
   margin-top: 1rem;
 }
@@ -1873,40 +1887,8 @@ $breakpoint arguments choices:
   border: 1px solid #333333;
   margin: 2.25rem auto 1rem;
 }
-.cropit-preview {
-  height: 24rem;
-  width: 24rem;
-  border: 1px solid #333333;
-  margin: 2.25rem auto 1rem;
-  border-radius: 50%;
-  background-size: cover;
-}
-
-.cropit-preview-image-container {
-  cursor: move;
-  border-radius: 50%;
-}
-
-.image-size-label {
-  margin-top: 10px;
-  color: #000;
-  /* margin-left: 20%; */
-}
-
-.upload-label:hover {
-  opacity: 0.8;
-}
-
-.upload-button:hover {
-  opacity: 0.8;
-}
-
 
 @media only screen and (max-width: 37.5em) {
-  .cropit-preview {
-    height: 16rem;
-    width: 16rem;
-  }
   .upload-picture {
     height: 13.75rem;
     width: 13.75rem;
@@ -1956,6 +1938,34 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 56.25em) {
   .upload-button {
+    margin-top: 3.25rem;
+  }
+}
+
+.upload-button-minister {
+  width: 13.875rem;
+  height: 2.9375rem;
+  background-color: #c08b1d;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.875rem;
+  border: none;
+  margin-top: 6.25rem;
+  margin-bottom: 10.1875rem;
+}
+
+.upload-button-minister:disabled {
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .upload-button-minister {
+    margin-bottom: 2.1875rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .upload-button-minister {
     margin-top: 3.25rem;
   }
 }
@@ -2224,5 +2234,40 @@ $breakpoint arguments choices:
   font-size: 0.875rem;
   color: white;
   cursor: pointer;
+}
+
+.cropit-preview {
+  height: 24rem;
+  width: 24rem;
+  border: 1px solid #333333;
+  margin: 2.25rem auto 1rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.cropit-preview-image-container {
+  cursor: move;
+  border-radius: 50%;
+}
+
+.image-size-label {
+  margin-top: 10px;
+  color: #000;
+  /* margin-left: 20%; */
+}
+
+.upload-label:hover {
+  opacity: 0.8;
+}
+
+.upload-button:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .cropit-preview {
+    height: 16rem;
+    width: 16rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

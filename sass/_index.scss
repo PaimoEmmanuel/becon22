@@ -1128,3 +1128,9 @@ $animationSpeed: 25s;
     transform: translateY(-10px);
   }
 }
+.minister-invite {
+  max-width: 25.625rem;
+  @include respond(tab-land) {
+    max-width: unset;
+  }
+}

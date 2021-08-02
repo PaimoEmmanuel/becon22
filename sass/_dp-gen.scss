@@ -55,6 +55,9 @@
       max-width: 16.25rem;
       margin: 0 auto 1rem;
     }
+    &-2 {
+      margin-top: 3.75rem;
+    }
   }
   &-direction-b {
     margin-top: 1rem;
@@ -116,6 +119,26 @@
     padding: 0.25rem;
   }
   &-button {
+    width: 13.875rem;
+    height: 2.9375rem;
+    background-color: #c08b1d;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 0.875rem;
+    border: none;
+    margin-top: 6.25rem;
+    margin-bottom: 10.1875rem;
+    &:disabled {
+      opacity: 0.4;
+    }
+    @include respond(tab-port) {
+      margin-bottom: 2.1875rem;
+    }
+    @include respond(tab-port) {
+      margin-top: 3.25rem;
+    }
+  }
+  &-button-minister {
     width: 13.875rem;
     height: 2.9375rem;
     background-color: #c08b1d;
@@ -318,5 +341,42 @@
     font-size: 0.875rem;
     color: white;
     cursor: pointer;
+  }
+}
+
+
+.cropit-preview {
+  height: 24rem;
+  width: 24rem;
+  border: 1px solid #333333;
+  margin: 2.25rem auto 1rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.cropit-preview-image-container {
+  cursor: move;
+  border-radius: 50%;
+}
+
+.image-size-label {
+  margin-top: 10px;
+  color: #000;
+  /* margin-left: 20%; */
+}
+
+.upload-label:hover {
+  opacity: 0.8;
+}
+
+.upload-button:hover {
+  opacity: 0.8;
+}
+
+
+@media only screen and (max-width: 37.5em) {
+  .cropit-preview {
+    height: 16rem;
+    width: 16rem;
   }
 }
