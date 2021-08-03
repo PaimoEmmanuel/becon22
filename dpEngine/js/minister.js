@@ -24,9 +24,9 @@ $(function () {
     const text2 = $(`#minister_text_2`).val()
 
     // name, y, x
-    const textData1 = [`${text1}`, 635, 974];
+    const textData1 = [`${text1}`, 615, 974];
     // name, y, x
-    const textData2 = [`${text2}`, 1810, 889];
+    const textData2 = [`${text2}`, 1700, 821];
 
     createDP(textData1, textData2, function (url) {
       navigateTo("yourdp", createHTMLForImage(url));
