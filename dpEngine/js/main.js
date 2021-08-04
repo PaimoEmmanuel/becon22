@@ -56,11 +56,11 @@ $(function () {
       let images = getImageArray();
       if (index < 2) {
         $.ajax({
-          url: "https://api.cloudinary.com/v1_1/dpsdxgdxk/image/upload",
+          url: "https://api.cloudinary.com/v1_1/dlkv3fl1f/image/upload",
           type: "POST",
           data: {
             file: url,
-            upload_preset: "ogam9eth",
+            upload_preset: "sb2wllyb",
           },
           success: function (result) {
             // console.log(result);
@@ -83,11 +83,11 @@ $(function () {
         return;
       }
       $.ajax({
-        url: "https://api.cloudinary.com/v1_1/dpsdxgdxk/image/upload",
+        url: "https://api.cloudinary.com/v1_1/dlkv3fl1f/image/upload",
         type: "POST",
         data: {
           file: url,
-          upload_preset: "ogam9eth",
+          upload_preset: "sb2wllyb",
         },
         success: function (result) {
           images[index] = result.public_id;
@@ -106,9 +106,9 @@ $(function () {
         return `
         <h3>Do the work of an Evangelist,
             share your Video far & wide</h3>
-        <a class="heading-links-a" href="https://res.cloudinary.com/dpsdxgdxk/video/upload/w_1080,h_1080/l_${
+        <a class="heading-links-a" href="https://res.cloudinary.com/dlkv3fl1f/video/upload/w_1080,h_1080/l_${
           images[0]
-        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_MainFlyer_cxjadx,so_15/fl_attachment/BeconVideo_frimnh.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
+        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_wjt81h.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
         `;
       }
     }
