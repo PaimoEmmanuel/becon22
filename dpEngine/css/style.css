@@ -107,3 +107,15 @@
   font-family: "Ubuntu-Bold";
   src: url("../fonts/Ubuntu/Ubuntu-Bold.ttf");
 }
+/* Regular */
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+/* al_nevrada */
+/* Regular */
+@font-face {
+  font-family: "AL_Nevrada_Personal_Use_Only";
+  src: url("../fonts/al_nevrada/AL_Nevrada_Personal_Use_Only.ttf");
+}
