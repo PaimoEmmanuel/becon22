@@ -78,7 +78,7 @@
       display: none;
     }
     @include respond(phone) {
-      width: 20rem;
+      width: 280px;
     }
   }
   &-select-wrapper {
