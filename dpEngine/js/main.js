@@ -116,8 +116,8 @@ $(function () {
 
     // x, y, width, height
     const picData1 = [132, 485, 244, 244];
-    const picData2 = [213, 436, 187, 187];
-    const picData3 = [189, 379, 187, 187];
+    const picData2 = [163, 416, 226, 226];
+    const picData3 = [140, 372, 238, 238];
     let images = getImageArray();
 
     createDP(0,images[0], picData1, textData1, genericCb);
@@ -179,7 +179,7 @@ $(function () {
             share your Video far & wide</h3>
         <a class="heading-links-a" href="https://res.cloudinary.com/dlkv3fl1f/video/upload/w_1080,h_1080/l_${
           images[0]
-        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_lybya6.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
+        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_c8dawa.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
         `;
       }
     }
@@ -289,9 +289,9 @@ $(function () {
       if(index == 0){
         ctx.arc(254, 607, 122, 0, Math.PI * 2, true);
       }else if(index == 1){
-        ctx.arc(306.5, 529.5, 93.5, 0, Math.PI * 2, true);
+        ctx.arc(276, 529, 113, 0, Math.PI * 2, true);
       }else{
-        ctx.arc(282.5, 472.5, 93.5, 0, Math.PI * 2, true);
+        ctx.arc(259, 491, 119, 0, Math.PI * 2, true);
       }
       ctx.closePath();
       ctx.clip();
