@@ -77,7 +77,7 @@ $(function () {
     // name, y, x
     const textData1 = [`${text1}`, 599, 440];
     // name, y, x
-    const textData2 = [`${text2}`, 393, 463];
+    const textData2 = [`${text2}`, 415, 444];
 
     const numberOfLines = countLines(text3, 20);
     let textData3 = [];
@@ -179,7 +179,7 @@ $(function () {
             share your Video far & wide</h3>
         <a class="heading-links-a" href="https://res.cloudinary.com/dlkv3fl1f/video/upload/w_1080,h_1080/l_${
           images[0]
-        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_c8dawa.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
+        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_lybya6.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
         `;
       }
     }
