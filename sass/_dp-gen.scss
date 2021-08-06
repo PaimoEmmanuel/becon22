@@ -82,6 +82,12 @@
       width: 280px;
     }
   }
+  &-textarea {
+    padding: 1rem;
+    @include respond(phone) {
+      width: 280px;
+    }
+  }
   &-select-wrapper {
     position: relative;
     width: fit-content;
