@@ -50,7 +50,8 @@
     font-weight: 300;
     font-size: 0.75rem;
     line-height: 1.125rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
+    max-width: 20.125rem;
     @include respond(tab-port) {
       max-width: 16.25rem;
       margin: 0 auto 1rem;
@@ -344,7 +345,6 @@
   }
 }
 
-
 .cropit-preview {
   height: 24rem;
   width: 24rem;
@@ -372,7 +372,6 @@
 .upload-button:hover {
   opacity: 0.8;
 }
-
 
 @media only screen and (max-width: 37.5em) {
   .cropit-preview {
