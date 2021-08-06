@@ -63,21 +63,23 @@ let modalTransition = 0;
 modalBtn.addEventListener("click", () => {
   document.querySelector(".modal-container").scrollTop =
     document.documentElement.scrollTop = 0;
-  if (index >= 3) {
-    document.querySelector(".modal").style.transform = "scale(0)";
-  } else {
-    modalTransition -= 100;
-    modalSection.forEach((item) => {
-      item.style.transform = `translate(${modalTransition}%)`;
-    });
-    document.querySelectorAll(".modal-indicator span")[
-      index
-    ].style.backgroundColor = "#a58543";
-  }
-  index++;
-  if (index > 2) {
-    modalBtn.innerHTML = "Yay! I’m ready";
-  }
+  // if (index >= 3) {
+  //   document.querySelector(".modal").style.transform = "scale(0)";
+  // } else {
+  //   modalTransition -= 100;
+  //   modalSection.forEach((item) => {
+  //     item.style.transform = `translate(${modalTransition}%)`;
+  //   });
+  //   document.querySelectorAll(".modal-indicator span")[
+  //     index
+  //   ].style.backgroundColor = "#a58543";
+  // }
+  // index++;
+  // if (index > 2) {
+  //   modalBtn.innerHTML = "Yay! I’m ready";
+  // }
+      document.querySelector(".modal").style.display = "none";
+
 });
 
 document.querySelector(".modal-button").addEventListener("click", () => {

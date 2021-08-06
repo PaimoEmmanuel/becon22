@@ -1823,7 +1823,8 @@ $breakpoint arguments choices:
   font-weight: 300;
   font-size: 0.75rem;
   line-height: 1.125rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
+  max-width: 20.125rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1861,7 +1862,7 @@ $breakpoint arguments choices:
 
 @media only screen and (max-width: 37.5em) {
   .upload-input {
-    width: 20rem;
+    width: 280px;
   }
 }
 

@@ -1,5 +1,14 @@
 $(function () {
   /* global variables */
+  function DifferenceInDays(firstDate, secondDate) {
+    return Math.ceil((secondDate - firstDate) / (1000 * 60 * 60 * 24));
+  }
+
+  /* global variables */
+  const today = new Date();
+  const eventDate = new Date("2021/08/08");
+  const daysToGo = DifferenceInDays(today, eventDate);
+
   const register = $(".register");
   const registerContent = register.innerHTML;
 
@@ -19,6 +28,11 @@ $(function () {
     exportCropitImage(1, $(".image-editor-2"))
   });
   $("#btn_upload_3").on("click", function () {
+    if($("#input_text_3").val()==""){
+      $("#error_paragraph_1").css('display', 'block');
+      return;
+    }
+    $("#error_paragraph_1").css('display', 'none');
     exportCropitImage(2, $(".image-editor-3"))
     processImage();
   });
@@ -33,23 +47,80 @@ $(function () {
     images[index] = imageData;
     setImageArray(images);
   }
+  
+  function countLines(text, maxWidth) {
+    var words = text.split(" ").filter(word => word!=="");
+    var line = "";
+    let count = 0;
+    // console.log(words)
+    // console.log(text.length)
+
+    for (var n = 0; n < words.length; n++) {
+      var testLine = line + words[n] + " ";
+      if (testLine.length > maxWidth && n > 0) {
+        // console.log(line)
+        count++;
+        line = words[n] + " ";
+      } else {
+        line = testLine;
+      }
+    }
+    return (count + 1);
+  }
+
 
   function processImage () {
     register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>0% done</h3>`);
     const text1 = $(`#input_text_1`).val()
     const text2 = $(`#input_text_2`).val()
+    const text3 = $(`#input_text_3`).val()
     // name, y, x
-    const textData1 = [`${text1}`, 485, 596];
+    const textData1 = [`${text1}`, 599, 440];
     // name, y, x
-    const textData2 = [`${text2}`, 433, 587];
+    const textData2 = [`${text2}`, 415, 444];
+
+    const numberOfLines = countLines(text3, 20);
+    let textData3 = [];
+    switch (numberOfLines) {
+      case 7:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 715, 424, `${text3}`, 424, 264];
+        break;
+      case 6:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 693, 424, `${text3}`, 424, 304];
+        break;
+      case 5:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 652, 424, `${text3}`, 425, 314];
+        break;
+      case 4:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 628, 424, `${text3}`, 425, 364];
+        break;
+      case 3:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 597, 424, `${text3}`, 425, 384];
+        break;
+      case 2:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 563, 440, `${text3}`, 441, 413];
+        break;
+      default:
+        // name, y, x, message, x, y
+        textData3 = [`${text1}`, 489, 424, `${text3}`, 425, 412];
+        break;
+    }
 
     // button.attr("disabled", "disabled").html("...processing");
 
     // x, y, width, height
-    const picData = [79, 276, 462, 462];
+    const picData1 = [132, 485, 244, 244];
+    const picData2 = [163, 416, 226, 226];
+    const picData3 = [140, 372, 238, 238];
     let images = getImageArray();
 
-    createDP(0,images[0], picData, textData1, genericCb);
+    createDP(0,images[0], picData1, textData1, genericCb);
 
     function genericCb (index, url) {
       //adasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadasdasdasdasdasdasdsaadsdasdasdasdasdasdasdasdasdasdadas
@@ -70,10 +141,10 @@ $(function () {
   
             if(index == 0){
               register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>30% done</h3>`);
-              createDP(1,images[1], picData, textData2, genericCb);
+              createDP(1,images[1], picData2, textData2, genericCb);
             }else{
               register.html(`<h3>Getting Your Video...</h3><h3>This might take some seconds</h3><h3>60% done</h3>`);
-              createDP(2,images[2], picData, "", genericCb);
+              createDP(2,images[2], picData3, textData3, genericCb);
             }
           },
           error: function (xhr, status, error) {
@@ -108,7 +179,7 @@ $(function () {
             share your Video far & wide</h3>
         <a class="heading-links-a" href="https://res.cloudinary.com/dlkv3fl1f/video/upload/w_1080,h_1080/l_${
           images[0]
-        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_wjt81h.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
+        },so_0,eo_5/l_${images[1]},so_5,eo_10/l_${images[2]},so_10,eo_15/l_Main_Flyer_jt8grg,so_15/fl_attachment/BeconClip_lybya6.mp4" download="Becon_Vid_${text1.replace(/\./g, "")}">Download my video</a>
         `;
       }
     }
@@ -176,7 +247,20 @@ $(function () {
     let userImg = loadImage(imageUrl);
     let frameImg = null;
     if(index == 0){
-      frameImg = loadImage("./dpEngine/img/Frame1.png");
+      switch (daysToGo) {
+        case 3:
+          frameImg = loadImage("./dpEngine/img/Frame1_3d.png");
+          break;
+        case 2:
+          frameImg = loadImage("./dpEngine/img/Frame1_2d.png");
+          break;
+        case 1:
+          frameImg = loadImage("./dpEngine/img/Frame1_1d.png");
+          break;
+        default:
+          frameImg = loadImage("./dpEngine/img/Frame1_dd.png");
+          break;
+      }
     }else if(index == 1){
       frameImg = loadImage("./dpEngine/img/Frame2.png");
     }else{
@@ -202,7 +286,13 @@ $(function () {
 
       ctx.save();
       ctx.beginPath();
-      ctx.arc(310, 507, 231, 0, Math.PI * 2, true);
+      if(index == 0){
+        ctx.arc(254, 607, 122, 0, Math.PI * 2, true);
+      }else if(index == 1){
+        ctx.arc(276, 529, 113, 0, Math.PI * 2, true);
+      }else{
+        ctx.arc(259, 491, 119, 0, Math.PI * 2, true);
+      }
       ctx.closePath();
       ctx.clip();
 
@@ -216,19 +306,33 @@ $(function () {
         //Write user name
         ctx.textBaseline = "top";
         ctx.textAlign = "left";
-        ctx.font = "65px Autography";
-        ctx.fillStyle = "#7e5a19";
+        ctx.font = "50px AL_Nevrada_Personal_Use_Only";
+        ctx.fillStyle = "#bd8e44";
         var canvasText = name[0];
         ctx.fillText(canvasText, name[2], name[1]);
         // ctx.renderText(name[3], name[2], name[1], 1);
-      }
+      }else{
+        //write messge
+        ctx.textBaseline = "top";
+        ctx.textAlign = "left";
+        ctx.font = "50px AL_Nevrada_Personal_Use_Only";
+        ctx.fillStyle = "#bd8e44";
+        // ctx.fillText(canvasText, name[2], name[1]);
+        wrapText(ctx, name[3], name[4], name[5], 20, 63, 0);
 
+        //Write user name
+        ctx.font = "33px Ubuntu-Regular";
+        ctx.fillStyle = "#342c2c";
+        var canvasText = `-${name[0]}`;
+        ctx.fillText(canvasText, name[2], name[1]);
+      }
+      
       cb(index, canvas.toDataURL("image/jpeg", 1.0));
     }
   }
 
   function wrapText(context, text, x, y, maxWidth, lineHeight, letterSpacing) {
-    let words = text.split(" ");
+    var words = text.split(" ").filter(word => word!=="");
     let line = "";
 
     for (let n = 0; n < words.length; n++) {
