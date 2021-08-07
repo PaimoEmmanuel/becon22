@@ -104,7 +104,7 @@ vids.forEach((vid, index) => {
 
 //Timer
 
-var countDownDate = new Date("Aug 8, 2021 00:00:00").getTime();
+var countDownDate = new Date("Aug 8, 2021 18:00:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
