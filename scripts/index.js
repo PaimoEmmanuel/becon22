@@ -104,7 +104,7 @@ vids.forEach((vid, index) => {
 
 //Timer
 
-var countDownDate = new Date("Aug 8, 2021 18:00:00").getTime();
+var countDownDate = new Date("Aug 8, 2021 17:30:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -127,8 +127,13 @@ var x = setInterval(function () {
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    timerEl.forEach((timer) => {
-      timer.innerHTML = "0";
+    timerEl.forEach((timer, index) => {
+      if (index !== 2 && index !== 4) {
+        timer.innerHTML = "0";
+      }
+    });
+    timer.forEach((timer) => {
+      timer.innerHTML = "0d 0h 0m 0s";
     });
   }
 }, 1000);
