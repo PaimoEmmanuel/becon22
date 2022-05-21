@@ -1,26 +1,97 @@
-const sliderText = document.querySelectorAll(".heading-subtext span");
-const heading = document.querySelector(".heading-subtext-wrapper");
-let topValue = -0;
-sliderText.forEach((text, index) => {
-  if (index !== sliderText.length - 1) {
-    setTimeout(function () {
-      if (window.innerWidth < 600) {
-        topValue -= 3.25;
-        console.log(window.innerWidth);
-      } else if (600 < window.innerWidth && window.innerWidth < 1200) {
-        topValue -= 4.05;
-        console.log(window.innerWidth);
-      } else if (window.innerWidth > 1200) {
-        topValue -= 5.2;
-        console.log(window.innerWidth);
-      }
-      heading.style.top = `${topValue}rem`;
-      text.style.opacity = 0;
-      sliderText[index + 1].style.opacity = 1;
-    }, index * 2000);
+// const sliderText = document.querySelectorAll(".heading-subtext span");
+// const heading = document.querySelector(".heading-subtext-wrapper");
+// let topValue = -0;
+// sliderText.forEach((text, index) => {
+//   if (index !== sliderText.length - 1) {
+//     setTimeout(function () {
+//       if (window.innerWidth < 600) {
+//         topValue -= 3.25;
+//         console.log(window.innerWidth);
+//       } else if (600 < window.innerWidth && window.innerWidth < 1200) {
+//         topValue -= 4.05;
+//         console.log(window.innerWidth);
+//       } else if (window.innerWidth > 1200) {
+//         topValue -= 5.2;
+//         console.log(window.innerWidth);
+//       }
+//       heading.style.top = `${topValue}rem`;
+//       text.style.opacity = 0;
+//       sliderText[index + 1].style.opacity = 1;
+//     }, index * 2000);
+//   }
+// });
+
+// Typing effect
+class TxtType {
+  constructor(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = "";
+    this.tick();
+    this.isDeleting = false;
   }
+  tick() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) {
+      delta /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  }
+}
+
+window.onload = function () {
+  var elements = document.getElementsByClassName("typewrite");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-type");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  // css.type = "text/css";
+  css.innerHTML = ".wrap { border-right: 0.08em solid #c08b1d}";
+  document.body.appendChild(css);
+};
+
+// Show old content
+const learnMoreButton = document.querySelector(".learn-more");
+const oldContent = document.querySelector(".old-content");
+learnMoreButton.addEventListener("click", () => {
+  oldContent.style.height = "100%";
+  oldContent.style.overflow = "visible";
+  oldContent.scrollIntoView();
 });
 
+// FAQs
 const faqButtons = document.querySelectorAll(".faq-button");
 const faqContents = document.querySelectorAll(".faq-content");
 
@@ -104,7 +175,7 @@ vids.forEach((vid, index) => {
 
 //Timer
 
-var countDownDate = new Date("Aug 8, 2021 17:30:00").getTime();
+var countDownDate = new Date("Aug 9, 2022 17:30:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -113,12 +184,11 @@ var x = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Output the result in an element with id="demo"
-  const timerEl = document.querySelectorAll(".countdown-big");
+  const timerEl = document.querySelectorAll(".countdown p span");
   timerEl[0].innerHTML = days;
   timerEl[1].innerHTML = hours;
-  timerEl[3].innerHTML = minutes;
-  timerEl[5].innerHTML = seconds;
+  timerEl[2].innerHTML = minutes;
+  timerEl[3].innerHTML = seconds;
 
   const timer = document.querySelectorAll(".timer");
   timer.forEach((timer) => {

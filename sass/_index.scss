@@ -1,5 +1,5 @@
 .container {
-  max-width: 1440px;
+  // max-width: 1440px;
   padding-left: 6.25rem;
   padding-right: 7.5rem;
   margin-left: auto;
@@ -16,6 +16,7 @@
 .nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 3.125rem;
   @include respond(tab-land) {
     justify-content: space-between;
@@ -161,24 +162,37 @@
   }
 }
 .heading {
-  padding-top: 6.25rem;
+  // padding-top: 6.25rem;
   overflow: hidden;
-  margin-top: 3rem;
-
+  margin-top: 98px;
+  text-transform: uppercase;
+  @include respond(tab-land) {
+    margin-top: 140px;
+  }
   @include respond(tab-port) {
     padding-top: 4.25rem;
+    margin-top: 120px;
   }
   @include respond(phone) {
     padding-top: 3.875rem;
+    margin-top: 60px;
   }
   h1 {
-    font-size: 3.4375rem;
-    font-weight: 700;
+    font-size: 72px;
+    line-height: 81px;
+    text-align: center;
+    font-weight: 400;
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: luxury, sans-serif;
     @include respond(tab-land) {
       font-size: 2.75rem;
+      line-height: 64px;
+      text-align: left;
     }
     @include respond(phone) {
-      font-size: 2.1875rem;
+      font-size: 26px;
+      line-height: 128%;
     }
   }
   &-subtext {
@@ -186,20 +200,20 @@
     // overflow: hidden;
     position: relative;
     display: inline-flex;
-    height: 5rem;
+    // height: 5rem;
     @include respond(tab-port) {
       overflow: hidden;
       // height: 3rem;
     }
     @include respond(phone) {
-      height: 3.5rem;
+      // height: 3.5rem;
     }
     &-wrapper {
       display: inline-flex;
       flex-direction: column;
       position: relative;
       top: 0;
-      transition: all 3s;
+      // transition: all 3s;
       background: linear-gradient(
         0deg,
         rgba(255, 255, 255, 1) 0%,
@@ -232,7 +246,7 @@
       position: absolute;
       right: 0;
       top: 0rem;
-      height: 120%;
+      // height: 120%;
       width: 100%;
       z-index: 99;
     }
@@ -276,6 +290,56 @@
       svg {
         margin-right: 0.625rem;
       }
+    }
+  }
+}
+.banner {
+  padding: 137px 137px 0;
+  @include respond(tab-land) {
+    padding: 100px 66px 0;
+  }
+  @include respond(phone) {
+    padding: 40px 20px 0;
+  }
+  img {
+    width: 100%;
+  }
+}
+.short-about {
+  display: flex;
+  // max-width: 996px;
+  padding: 0 268px;
+  gap: 40px;
+  justify-content: space-between;
+  margin: 64px auto;
+  @include respond(tab-land) {
+    padding: 0 168px;
+  }
+  @include respond(tab-port) {
+    padding: 0 66px;
+    flex-direction: column;
+    margin: 64px 0;
+  }
+  @include respond(phone) {
+    padding: 0px 20px 0;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 56px;
+    color: #c08b1d;
+    max-width: 314px;
+    @include respond(tab-port) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  p {
+    font-weight: 18px;
+    font-weight: 300;
+    max-width: 484px;
+
+    span {
+      font-weight: 700;
     }
   }
 }
@@ -353,64 +417,60 @@
     }
   }
 }
-
 .countdown {
-  background-color: rgba(#f8efde, 0.3);
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.05);
-  margin-top: 7.75rem;
-  padding: 5.3125rem 13.625rem 1.875rem;
-  @include respond(tab-land) {
-    padding: 3rem;
-  }
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 28px 67px;
+  border: 1px solid #c08b1d;
+  border-radius: 61px;
+  width: fit-content;
+  margin: 103px auto;
+  position: relative;
+  background-color: white;
   @include respond(tab-port) {
-    margin-top: 4.75rem;
+    padding: 18px 22px;
+    gap: 12px;
   }
-  @include respond(phone) {
-    padding: 3rem 0rem;
-    background-color: rgba(#f8efde, 0.7);
-    box-shadow: none;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    background-color: #d9d9d9;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
   }
-  &-bg {
-    @include respond(phone) {
-      background-color: rgba(#f8efde, 0.7);
-    }
-  }
-
-  &-figures {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2.2rem;
-  }
-  &-text {
-    text-align: center;
+  p {
+    font-weight: 300;
     span {
-      font-weight: 600;
+      font-weight: 400;
+      font-family: Luxury sans-serif;
+      font-size: 40px;
+      color: #c08b1d;
+      @include respond(tab-port) {
+        font-size: 28px;
+      }
     }
   }
-  &-big {
-    font-size: 3.4375rem;
-    line-height: 4.0625rem;
-    font-weight: 700;
-    // 2.1875
-    @include respond(phone) {
-      font-size: 2.1875rem;
-      line-height: 3.25rem;
-    }
-  }
-  &-sm {
-    font-size: 1.25rem;
-    line-height: 4.0625rem;
-    @include respond(phone) {
-      font-size: 0.75rem;
-      line-height: 1.125rem;
-    }
-  }
-  &-span {
-    height: 3.8125rem;
-    width: 0.5px;
-    background-color: rgba(#333333, 0.3);
-  }
+}
+.learn-more {
+  display: flex;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 240px;
+  text-decoration: underline;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.old-content {
+  height: 0;
+  overflow: hidden;
 }
 .register {
   max-width: 46.25rem;
