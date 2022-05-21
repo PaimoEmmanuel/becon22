@@ -28,7 +28,7 @@ a:hover {
 
 h1,
 h2 {
-  font-family: Luxury, sans-serif;
+  font-family: Luxury sans-serif;
   font-weight: 400;
 }
 
@@ -274,7 +274,7 @@ $breakpoint arguments choices:
   font-weight: 400;
   max-width: 960px;
   margin: 0 auto;
-  font-family: luxury, sans-serif;
+  font-family: Luxury sans-serif;
 }
 @media only screen and (max-width: 75em) {
   .heading h1 {
