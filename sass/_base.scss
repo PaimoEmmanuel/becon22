@@ -23,7 +23,7 @@ a {
 }
 h1,
 h2 {
-  font-family: Luxury sans-serif;
+  font-family: Luxury;
   font-weight: 400;
 }
 button {
@@ -33,7 +33,7 @@ button {
 @font-face {
   font-family: Luxury;
   src: url("../images/luxury.woff") format("woff");
-  src: url("../images/luxury.ttf") format("tff");
+  // src: url("../images/luxury.ttf") format("tff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

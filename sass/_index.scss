@@ -184,7 +184,7 @@
     font-weight: 400;
     max-width: 960px;
     margin: 0 auto;
-    font-family: Luxury sans-serif;
+    font-family: Luxury;
     @include respond(tab-land) {
       font-size: 2.75rem;
       line-height: 64px;
@@ -446,7 +446,7 @@
     font-weight: 300;
     span {
       font-weight: 400;
-      font-family: Luxury sans-serif;
+      font-family: Luxury;
       font-size: 40px;
       color: #c08b1d;
       @include respond(tab-port) {
