@@ -39,6 +39,7 @@ button {
 @font-face {
   font-family: Luxury;
   src: url("../images/luxury.woff") format("woff");
+  src: url("../images/luxury.ttf") format("tff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
