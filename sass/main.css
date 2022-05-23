@@ -370,6 +370,19 @@ $breakpoint arguments choices:
   margin-right: 0.625rem;
 }
 
+.banner {
+  padding: 137px 0 0;
+}
+@media only screen and (max-width: 75em) {
+  .banner {
+    padding: 100px 0 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .banner {
+    padding: 40px 0 0;
+  }
+}
 .banner img {
   width: 100%;
 }

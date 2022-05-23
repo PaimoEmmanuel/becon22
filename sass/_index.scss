@@ -295,13 +295,13 @@
   }
 }
 .banner {
-  // padding: 137px 137px 0;
-  // @include respond(tab-land) {
-  //   padding: 100px 66px 0;
-  // }
-  // @include respond(phone) {
-  //   padding: 40px 20px 0;
-  // }
+  padding: 137px 0 0;
+  @include respond(tab-land) {
+    padding: 100px 0 0;
+  }
+  @include respond(phone) {
+    padding: 40px 0 0;
+  }
   img {
     width: 100%;
   }
