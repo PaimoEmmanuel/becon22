@@ -285,7 +285,8 @@ $breakpoint arguments choices:
 }
 @media only screen and (max-width: 37.5em) {
   .heading h1 {
-    font-size: 26px;
+    font-size: 28px;
+    min-height: 180px;
     line-height: 128%;
   }
 }
@@ -299,7 +300,6 @@ $breakpoint arguments choices:
   }
 }
 .heading-subtext-wrapper {
-  display: inline-flex;
   flex-direction: column;
   position: relative;
   top: 0;
@@ -308,7 +308,6 @@ $breakpoint arguments choices:
 .heading-subtext span {
   display: inline-flex;
   transition: all 2s ease-in;
-  opacity: 0.2;
 }
 .heading-subtext span:first-child {
   opacity: 1;
@@ -371,19 +370,6 @@ $breakpoint arguments choices:
   margin-right: 0.625rem;
 }
 
-.banner {
-  padding: 137px 137px 0;
-}
-@media only screen and (max-width: 75em) {
-  .banner {
-    padding: 100px 66px 0;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .banner {
-    padding: 40px 20px 0;
-  }
-}
 .banner img {
   width: 100%;
 }
@@ -420,7 +406,7 @@ $breakpoint arguments choices:
 }
 @media only screen and (max-width: 56.25em) {
   .short-about h2 {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 36px;
   }
 }
@@ -431,6 +417,10 @@ $breakpoint arguments choices:
 }
 .short-about p span {
   font-weight: 700;
+}
+
+.wrap {
+  position: relative;
 }
 
 .image-grid {
@@ -583,7 +573,7 @@ $breakpoint arguments choices:
   border: none;
   font-size: 18px;
   margin: 0 auto;
-  margin-bottom: 240px;
+  margin-bottom: 120px;
   text-decoration: underline;
   align-items: center;
   justify-content: center;

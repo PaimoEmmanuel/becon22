@@ -52,6 +52,9 @@ class TxtType {
     }
 
     if (!this.isDeleting && this.txt === fullTxt) {
+      if (this.loopNum > 2) {
+        return;
+      }
       delta = this.period;
       this.isDeleting = true;
     } else if (this.isDeleting && this.txt === "") {
@@ -76,10 +79,11 @@ window.onload = function () {
     }
   }
   // INJECT CSS
-  var css = document.createElement("style");
+  // var css = document.createElement("style");
   // css.type = "text/css";
-  css.innerHTML = ".wrap { border-right: 0.08em solid #c08b1d}";
-  document.body.appendChild(css);
+  // css.innerHTML =
+  //   '.wrap::after {content: ""; position: absolute;height: 30px;width: 2px;bottom: 6px;right: -4px;background: #c08b1d;}';
+  // document.body.appendChild(css);
 };
 
 // Show old content
