@@ -188,7 +188,7 @@
     @include respond(tab-land) {
       font-size: 2.75rem;
       line-height: 64px;
-      text-align: left;
+      // text-align: left;
     }
     @include respond(phone) {
       font-size: 28px;
@@ -295,15 +295,19 @@
   }
 }
 .register-now {
-  width: 222px;
-  height: 48px;
+  width: 153px;
+  height: 52px;
   background-color: #c08b1d;
   margin: 50px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  border-radius: 50px;
+  border-radius: 6px;
+  gap: 6px;
+  @include respond(phone) {
+    margin: 0 auto 0;
+  }
 }
 .banner {
   padding: 137px 0 0;
@@ -473,16 +477,17 @@
 }
 .learn-more {
   display: flex;
+  width: 277px;
+  height: 55px;
   gap: 4px;
-  background: none;
+  background-color: #C08B1D;
   border: none;
   font-size: 18px;
-  margin: 0 auto;
-  margin-bottom: 120px;
-  text-decoration: underline;
+  margin: 100px auto;
   align-items: center;
   justify-content: center;
-  color: #000;
+  border-radius: 6px;
+  color: white;
 }
 .old-content {
   height: 0;
@@ -625,7 +630,7 @@
     @include respond(phone) {
       font-size: 1.5625rem;
       line-height: 2.1875rem;
-      padding: 0;
+      padding: 0 34px;
     }
   }
   &-wrapper {
@@ -874,7 +879,7 @@
   @include respond(phone) {
     padding: 1rem 1rem 0;
   }
-  h4 {
+  p {
     font-size: 2.1875rem;
     line-height: 3rem;
     font-weight: 700;
@@ -1044,10 +1049,16 @@ $animationSpeed: 25s;
   // box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
   // height: 100px;
   // margin: auto;
-  overflow: hidden;
+  padding: 0 140px;
+  overflow: scroll;
   position: relative;
   // width: 960px;
-
+  @include respond(tab-port) {
+    padding: 0 70px;
+  }
+  @include respond(phone) {
+    padding: 0 24px;
+  }
   &::before,
   &::after {
     @include white-gradient;
@@ -1070,7 +1081,7 @@ $animationSpeed: 25s;
   }
 
   .slide-track {
-    animation: scroll $animationSpeed linear infinite;
+    // animation: scroll $animationSpeed linear infinite;
     display: flex;
     width: calc(240px * 14);
     &:hover {

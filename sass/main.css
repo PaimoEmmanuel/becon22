@@ -34,7 +34,10 @@ a:hover {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
   font-family: Luxury;
   font-weight: 400;
 }
@@ -280,7 +283,6 @@ $breakpoint arguments choices:
   .heading h1 {
     font-size: 2.75rem;
     line-height: 64px;
-    text-align: left;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -371,15 +373,21 @@ $breakpoint arguments choices:
 }
 
 .register-now {
-  width: 222px;
-  height: 48px;
+  width: 153px;
+  height: 52px;
   background-color: #c08b1d;
   margin: 50px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  border-radius: 50px;
+  border-radius: 6px;
+  gap: 6px;
+}
+@media only screen and (max-width: 37.5em) {
+  .register-now {
+    margin: 0 auto 0;
+  }
 }
 
 .banner {
@@ -593,16 +601,17 @@ $breakpoint arguments choices:
 
 .learn-more {
   display: flex;
+  width: 277px;
+  height: 55px;
   gap: 4px;
-  background: none;
+  background-color: #C08B1D;
   border: none;
   font-size: 18px;
-  margin: 0 auto;
-  margin-bottom: 120px;
-  text-decoration: underline;
+  margin: 100px auto;
   align-items: center;
   justify-content: center;
-  color: #000;
+  border-radius: 6px;
+  color: white;
 }
 
 .old-content {
@@ -777,7 +786,7 @@ $breakpoint arguments choices:
   .previous-themes-heading {
     font-size: 1.5625rem;
     line-height: 2.1875rem;
-    padding: 0;
+    padding: 0 34px;
   }
 }
 .previous-themes-wrapper {
@@ -1071,7 +1080,7 @@ $breakpoint arguments choices:
     padding: 1rem 1rem 0;
   }
 }
-.fs h4 {
+.fs p {
   font-size: 2.1875rem;
   line-height: 3rem;
   font-weight: 700;
@@ -1079,17 +1088,17 @@ $breakpoint arguments choices:
   max-width: 31.5625rem;
 }
 @media only screen and (max-width: 75em) {
-  .fs h4 {
+  .fs p {
     text-align: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .fs h4 {
+  .fs p {
     font-size: 1.5625rem;
     line-height: 2.1875rem;
   }
 }
-.fs h4 span {
+.fs p span {
   color: #c08b1d;
 }
 .fs-img {
@@ -1302,8 +1311,19 @@ $breakpoint arguments choices:
   }
 }
 .slider {
-  overflow: hidden;
+  padding: 0 140px;
+  overflow: scroll;
   position: relative;
+}
+@media only screen and (max-width: 56.25em) {
+  .slider {
+    padding: 0 70px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .slider {
+    padding: 0 24px;
+  }
 }
 .slider::before, .slider::after {
   background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
@@ -1321,8 +1341,6 @@ $breakpoint arguments choices:
   top: 0;
 }
 .slider .slide-track {
-  -webkit-animation: scroll 25s linear infinite;
-          animation: scroll 25s linear infinite;
   display: flex;
   width: 3360px;
 }
