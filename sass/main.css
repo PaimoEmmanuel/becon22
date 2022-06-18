@@ -1310,6 +1310,10 @@ $breakpoint arguments choices:
   }
 }
 .slider {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
   padding: 0 140px;
   overflow: scroll;
   position: relative;
@@ -1346,6 +1350,11 @@ $breakpoint arguments choices:
 .slider .slide-track:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 .social-media {
