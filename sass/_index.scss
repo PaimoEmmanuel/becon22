@@ -659,10 +659,14 @@
     border-radius: 0 0 6px 6px;
     height: 7.1875rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
     @include respond(phone) {
       width: 70vw;
+      gap: 1rem;
+      padding: 0 1rem;
     }
     &-primary {
       font-size: 1.25rem;
@@ -670,9 +674,12 @@
       line-height: 1.875rem;
     }
     &-secondary {
-      font-size: 0.9375rem;
+      font-size: 20px;
       font-weight: 300;
+      color: #cfcccc;
       line-height: 1.40625rem;
+
+      font-family: "Luxury";
     }
   }
 }
@@ -723,7 +730,6 @@
     }
     svg {
       transition: all 0.5s;
-      
     }
   }
   .active {

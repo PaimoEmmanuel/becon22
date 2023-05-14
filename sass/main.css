@@ -839,12 +839,15 @@ $breakpoint arguments choices:
   border-radius: 0 0 6px 6px;
   height: 7.1875rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .previous-themes-textbox {
     width: 70vw;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 }
 .previous-themes-textbox-primary {
@@ -853,9 +856,11 @@ $breakpoint arguments choices:
   line-height: 1.875rem;
 }
 .previous-themes-textbox-secondary {
-  font-size: 0.9375rem;
+  font-size: 20px;
   font-weight: 300;
+  color: #cfcccc;
   line-height: 1.40625rem;
+  font-family: "Luxury";
 }
 
 #old-content {
