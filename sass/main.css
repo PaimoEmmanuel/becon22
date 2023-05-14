@@ -1,9 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @font-face {
   font-family: Luxury;
   src: url("../images/Luxury.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mont;
+  src: url("../images/fonts/Mont-Trial-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mont;
+  src: url("../images/fonts/Mont-Trial-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mont;
+  src: url("../images/fonts/Mont-Trial-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mont;
+  src: url("../images/fonts/Mont-Trial-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mont;
+  src: url("../images/fonts/Mont-Trial-Black.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -21,7 +54,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Mont";
   overflow-x: hidden;
 }
 
@@ -31,6 +64,11 @@ a {
 }
 a:hover {
   opacity: 0.8;
+}
+
+a,
+button {
+  font-family: Mont;
 }
 
 h1,
@@ -251,7 +289,6 @@ $breakpoint arguments choices:
 .heading {
   overflow: hidden;
   margin-top: 98px;
-  text-transform: uppercase;
 }
 @media only screen and (max-width: 75em) {
   .heading {
@@ -316,6 +353,7 @@ $breakpoint arguments choices:
 }
 .heading-subtext span:last-child {
   color: #c08b1d;
+  text-decoration: underline;
 }
 .heading-subtext-bg {
   position: absolute;
@@ -350,13 +388,13 @@ $breakpoint arguments choices:
 }
 .heading-links-a {
   height: 3rem;
-  width: 13.875rem;
+  width: 260px;
   background-color: #c08b1d;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3.125rem;
+  border-radius: 12px;
   margin-right: 1.5625rem;
   font-size: 0.875rem;
 }
@@ -373,7 +411,7 @@ $breakpoint arguments choices:
 }
 
 .register-now {
-  width: 153px;
+  width: 328px;
   height: 52px;
   background-color: #c08b1d;
   margin: 50px auto 0;
@@ -381,7 +419,7 @@ $breakpoint arguments choices:
   justify-content: center;
   align-items: center;
   color: white;
-  border-radius: 6px;
+  border-radius: 12px;
   gap: 6px;
 }
 @media only screen and (max-width: 37.5em) {
@@ -444,114 +482,46 @@ $breakpoint arguments choices:
   }
 }
 .short-about p {
-  font-weight: 18px;
-  font-weight: 300;
+  font-size: 18px;
   max-width: 484px;
 }
 .short-about p span {
   font-weight: 700;
+  color: #c08b1d;
 }
 
 .wrap {
   position: relative;
 }
 
+.convention__date {
+  padding: 0 24px;
+  text-align: center;
+}
+.convention__date--title {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.43em;
+  margin-bottom: 8px;
+}
+.convention__date--date {
+  color: #c08b1d;
+  font-size: 18px;
+}
+
 .image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  margin-top: 5.875rem;
-  padding-inline: 3.125rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid {
-    position: relative;
-    height: 30rem;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .image-grid {
-    height: 25.875em;
-  }
-}
-.image-grid-img {
-  height: 41rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
+  overflow-x: scroll;
+  margin-top: 112px;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-@media only screen and (max-width: 56.25em) {
-  .image-grid-img {
-    position: absolute;
-    width: 100%;
-    border-radius: 0;
-    height: 30rem;
-    top: 0;
-  }
+.image-grid img {
+  max-width: 110%;
+  min-width: 110%;
 }
-@media only screen and (max-width: 37.5em) {
-  .image-grid-img {
-    height: 25.875em;
-  }
-}
-.image-grid-img:first-child {
-  margin-top: 6rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid-img:first-child {
-    margin-top: 0;
-    -webkit-animation: blinker-4 8s ease infinite;
-            animation: blinker-4 8s ease infinite;
-  }
-}
-.image-grid-img:nth-child(2) {
-  display: none;
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid-img:nth-child(2) {
-    display: block;
-    -webkit-animation: blinker-3 8s ease infinite;
-            animation: blinker-3 8s ease infinite;
-  }
-}
-.image-grid-img:nth-child(3) {
-  display: none;
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid-img:nth-child(3) {
-    display: block;
-    -webkit-animation: blinker-2 8s ease infinite;
-            animation: blinker-2 8s ease infinite;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid-img:last-child {
-    -webkit-animation: blinker 8s ease infinite;
-            animation: blinker 8s ease infinite;
-  }
-}
-.image-grid-img-2 {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 10px;
-  height: 24.6875rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .image-grid-img-2 {
-    display: none;
-  }
-}
-.image-grid-img-2:first-child {
-  margin-top: 2.625rem;
-  margin-bottom: 4.3125rem;
+.image-grid::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .countdown {
@@ -614,11 +584,6 @@ $breakpoint arguments choices:
   color: white;
 }
 
-.old-content {
-  height: 0;
-  overflow: hidden;
-}
-
 .register {
   max-width: 46.25rem;
   margin: 7.5rem auto 9.375rem auto;
@@ -640,6 +605,11 @@ $breakpoint arguments choices:
   font-size: 1.25rem;
   line-height: 2.1875rem;
   margin-bottom: 3.125rem;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+.register p span {
+  color: #c08b1d;
 }
 .register a {
   margin: auto;
@@ -666,10 +636,13 @@ $breakpoint arguments choices:
   margin: 0 auto;
 }
 .theme-wrapper {
-  margin: 5.3125rem auto 0 auto;
+  margin: 0 auto 0 auto;
+  padding-top: 5.3125rem;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  max-width: 68.0625rem;
+  max-width: 72.0625rem;
+  gap: 3.4375rem;
 }
 @media only screen and (max-width: 75em) {
   .theme-wrapper {
@@ -678,14 +651,15 @@ $breakpoint arguments choices:
 }
 @media only screen and (max-width: 56.25em) {
   .theme-wrapper {
-    margin: 3.3125rem auto 0 auto;
+    margin: 0 auto 0 auto;
+    padding-top: 3.3125rem;
   }
 }
 .theme-wrapper img {
-  margin-right: 3.4375rem;
   border-radius: 10px;
   -webkit-animation: MoveUpDown 2s ease-in-out infinite;
           animation: MoveUpDown 2s ease-in-out infinite;
+  width: 50%;
 }
 @media only screen and (max-width: 75em) {
   .theme-wrapper img {
@@ -703,8 +677,7 @@ $breakpoint arguments choices:
   margin-bottom: 2.1875rem;
 }
 .theme-wrapper p {
-  font-size: 1.25rem;
-  line-height: 2.1875rem;
+  line-height: 26.88px;
 }
 .theme-wrapper p a {
   font-weight: 500;
@@ -713,6 +686,50 @@ $breakpoint arguments choices:
 }
 .theme-wrapper p a:hover {
   color: #c08b1d;
+}
+
+.new-theme {
+  background-color: #ededed;
+  padding: 64px 24px;
+}
+.new-theme p {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 28px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media only screen and (max-width: 37.5em) {
+  .new-theme p {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+.new-theme p span {
+  font-weight: 800;
+}
+
+.border-container-parent {
+  background-color: #ededed;
+}
+
+.border-container {
+  background: #ffffff;
+  box-shadow: 0px -8px 44px rgba(0, 0, 0, 0.06);
+  border-radius: 56px;
+  padding-bottom: 80px;
+}
+@media only screen and (max-width: 37.5em) {
+  .border-container {
+    border-radius: 24px;
+  }
 }
 
 .dp {
@@ -822,12 +839,15 @@ $breakpoint arguments choices:
   border-radius: 0 0 6px 6px;
   height: 7.1875rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 @media only screen and (max-width: 37.5em) {
   .previous-themes-textbox {
     width: 70vw;
+    gap: 1rem;
+    padding: 0 1rem;
   }
 }
 .previous-themes-textbox-primary {
@@ -836,9 +856,15 @@ $breakpoint arguments choices:
   line-height: 1.875rem;
 }
 .previous-themes-textbox-secondary {
-  font-size: 0.9375rem;
+  font-size: 20px;
   font-weight: 300;
+  color: #cfcccc;
   line-height: 1.40625rem;
+  font-family: "Luxury";
+}
+
+#old-content {
+  background: #ededed;
 }
 
 .faq {
@@ -847,6 +873,7 @@ $breakpoint arguments choices:
 @media only screen and (max-width: 37.5em) {
   .faq {
     margin-top: 7.25rem;
+    padding: 0 24px;
   }
 }
 .faq h3 {
@@ -854,15 +881,17 @@ $breakpoint arguments choices:
   margin-bottom: 3.125rem;
 }
 .faq-item {
-  margin-bottom: 5px;
+  margin: 6px auto;
+  max-width: 48rem;
+  border: 1px solid #dedede;
 }
 .faq-button {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #f3f3f3;
   border: none;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-  padding: 1.25rem 3.4375rem 1.25rem 5.9375rem;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -883,21 +912,24 @@ $breakpoint arguments choices:
     text-align: left;
     font-size: 0.8125rem;
     line-height: 1.21875rem;
-    border-bottom: 1px solid #e3d6d6;
   }
 }
-@media only screen and (max-width: 37.5em) {
-  .faq-button svg {
-    height: 4px;
-  }
+.faq-button svg {
+  transition: all 0.5s;
+}
+.faq .active svg {
+  transform: rotate(45deg);
 }
 .faq-content {
-  font-size: 1.125rem;
-  line-height: 1.875rem;
-  padding: 0 3.4375rem 0 5.9375rem;
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 600;
+  padding: 0 1.5rem 0 1.5rem;
+  color: #939393;
   height: 0;
   overflow: hidden;
   transition: all 0.3s;
+  background-color: #f3f3f3;
 }
 @media only screen and (max-width: 56.25em) {
   .faq-content {
@@ -997,7 +1029,7 @@ $breakpoint arguments choices:
   }
 }
 .video-primary {
-  color: #a58543;
+  color: #ffe7b4;
   font-size: 3.4375rem;
   line-height: 4.25rem;
 }
@@ -1014,7 +1046,7 @@ $breakpoint arguments choices:
 .video-secondary {
   margin-top: 1.25rem;
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 2.0625rem;
   color: white;
 }
@@ -1024,16 +1056,11 @@ $breakpoint arguments choices:
     line-height: 1.875rem;
   }
 }
-.video-footer {
-  background-color: #785f2a;
-  padding-bottom: 4.5625rem;
-}
 .video-footer h4 {
-  max-width: 43.3125rem;
-  font-size: 3.125rem;
-  line-height: 3.9375rem;
+  max-width: 430px;
+  font-size: 36px;
+  line-height: 50px;
   font-weight: 500;
-  color: white;
   text-align: center;
   padding-top: 7.1875rem;
   margin: 0 auto 0 auto;
@@ -1046,8 +1073,13 @@ $breakpoint arguments choices:
 }
 .video-footer a {
   margin: 3.125rem auto 0;
-  background-color: white;
-  color: black;
+  font-weight: 600;
+  color: #c08b1d;
+  background-color: transparent;
+  width: 335px;
+  border: 1px solid #c08b1d;
+  filter: drop-shadow(0px 6px 24px rgba(0, 0, 0, 0.08));
+  border-radius: 12px;
 }
 @media only screen and (max-width: 75em) {
   .video-footer a {
@@ -1058,6 +1090,8 @@ $breakpoint arguments choices:
 .fs {
   margin-top: 8.75rem;
   background-color: #f8efde;
+  border-radius: 24px;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 50%, #ffd18c 50%);
   display: flex;
   justify-content: space-between;
   padding: 6.25rem 3.125rem 0;
@@ -1066,6 +1100,7 @@ $breakpoint arguments choices:
   .fs {
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(180deg, rgb(255, 255, 255) 50%, #ffd18c 50%);
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -1077,6 +1112,7 @@ $breakpoint arguments choices:
 @media only screen and (max-width: 37.5em) {
   .fs {
     padding: 1rem 1rem 0;
+    border-radius: 24px 24px 0 0;
   }
 }
 .fs p {
@@ -1095,6 +1131,7 @@ $breakpoint arguments choices:
   .fs p {
     font-size: 1.5625rem;
     line-height: 2.1875rem;
+    margin-bottom: 1rem;
   }
 }
 .fs p span {
@@ -1121,11 +1158,22 @@ $breakpoint arguments choices:
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+    margin-bottom: 4rem;
   }
 }
 .fs-link {
   margin-right: 2.875rem;
   display: inline-block;
+  width: 138px;
+}
+.fs-link img {
+  width: 100%;
+}
+@media only screen and (max-width: 75em) {
+  .fs-link {
+    margin-right: 0;
+  }
 }
 
 @-webkit-keyframes blinker {
@@ -1240,6 +1288,7 @@ $breakpoint arguments choices:
   margin-top: 9.375rem;
   max-width: 39rem;
   text-align: center;
+  border-bottom: 1px solid #c08b1d;
 }
 @media only screen and (max-width: 37.5em) {
   .footnote {
@@ -1247,12 +1296,13 @@ $breakpoint arguments choices:
   }
 }
 .footnote h4 {
-  font-size: 3.125rem;
-  line-height: 3.9375rem;
+  font-size: 40px;
+  line-height: 56px;
+  max-width: 448px;
+  margin: 0 auto 3.125rem;
   color: #c08b1d;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 3.125rem;
 }
 @media only screen and (max-width: 37.5em) {
   .footnote h4 {
@@ -1274,21 +1324,19 @@ $breakpoint arguments choices:
 }
 
 .footer {
-  background-color: #c08b1d;
-  color: white;
   padding-top: 2.75rem;
   padding-bottom: 2.25rem;
   text-align: center;
-  margin-top: 9.1875rem;
-  font-size: 1.25rem;
+  font-size: 17px;
+  max-width: 350px;
+  margin: 0 auto;
+  font-weight: 700;
 }
 @media only screen and (max-width: 37.5em) {
   .footer {
-    font-size: 0.5rem;
-    line-height: 0.75rem;
+    font-size: 14px;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-top: 4.8125rem;
   }
 }
 
@@ -1310,10 +1358,8 @@ $breakpoint arguments choices:
   }
 }
 .slider {
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
-  scrollbar-width: none;
-  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
   padding: 0 140px;
   overflow: scroll;
   position: relative;
@@ -1353,8 +1399,7 @@ $breakpoint arguments choices:
 }
 
 .slider::-webkit-scrollbar {
-  display: none;
-  /* Safari and Chrome */
+  display: none; /* Safari and Chrome */
 }
 
 .social-media {

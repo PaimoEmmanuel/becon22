@@ -87,13 +87,13 @@ window.onload = function () {
 };
 
 // Show old content
-const learnMoreButton = document.querySelector(".learn-more");
-const oldContent = document.querySelector(".old-content");
-learnMoreButton.addEventListener("click", () => {
-  oldContent.style.height = "100%";
-  oldContent.style.overflow = "visible";
-  oldContent.scrollIntoView();
-});
+// const learnMoreButton = document.querySelector(".learn-more");
+// const oldContent = document.querySelector(".old-content");
+// learnMoreButton.addEventListener("click", () => {
+//   oldContent.style.height = "100%";
+//   oldContent.style.overflow = "visible";
+//   oldContent.scrollIntoView();
+// });
 
 // FAQs
 const faqButtons = document.querySelectorAll(".faq-button");
@@ -110,9 +110,10 @@ faqButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (faqButtonsState[index] === false) {
       faqContents[index].style.height = "auto";
-      button.style.backgroundColor = "#C08B1D";
+      button.classList.add("active");
       faqContents[index].style.paddingTop = "1.25rem";
       faqContents[index].style.paddingBottom = "1.25rem";
+      button.style.paddingBottom = "0rem";
       faqButtonsState[index] = !faqButtonsState[index];
       //     padding: 1.25rem 3.4375rem 1.25rem 5.9375rem;
     } else {
@@ -120,7 +121,8 @@ faqButtons.forEach((button, index) => {
       faqContents[index].style.paddingTop = "0";
       faqContents[index].style.paddingBottom = "0";
       faqButtonsState[index] = !faqButtonsState[index];
-      button.style.backgroundColor = "#f4f4f4";
+      button.style.paddingBottom = "1.5rem";
+      button.classList.remove("active");
     }
   });
 });
@@ -179,7 +181,7 @@ vids.forEach((vid, index) => {
 
 //Timer
 
-var countDownDate = new Date("Aug 7, 2022 17:30:00").getTime();
+var countDownDate = new Date("Aug 6, 2023 17:30:00").getTime();
 var x = setInterval(function () {
   var now = new Date().getTime();
   var distance = countDownDate - now;
