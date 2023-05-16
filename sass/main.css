@@ -7,42 +7,42 @@
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Light.otf") format("opentype");
+  src: url("../images/fonts/Mont-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Regular.otf") format("opentype");
+  src: url("../images/fonts/Mont-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-SemiBold.otf") format("opentype");
+  src: url("../images/fonts/Mont-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Bold.otf") format("opentype");
+  src: url("../images/fonts/Mont-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Heavy.otf") format("opentype");
+  src: url("../images/fonts/Mont-Heavy.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Black.otf") format("opentype");
+  src: url("../images/fonts/Mont-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
