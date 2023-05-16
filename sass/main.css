@@ -7,35 +7,42 @@
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Light.woff") format("woff");
+  src: url("../images/fonts/Mont-Trial-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Regular.woff") format("woff");
-  font-weight: normal;
+  src: url("../images/fonts/Mont-Trial-Regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-SemiBold.woff") format("woff");
+  src: url("../images/fonts/Mont-Trial-SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Bold.woff") format("woff");
+  src: url("../images/fonts/Mont-Trial-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: Mont;
-  src: url("../images/fonts/Mont-Trial-Black.woff") format("woff");
+  src: url("../images/fonts/Mont-Trial-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Mont;
+  src: url("../images/fonts/Mont-Trial-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -338,6 +345,11 @@ $breakpoint arguments choices:
     overflow: hidden;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-subtext {
+    display: block;
+  }
+}
 .heading-subtext-wrapper {
   flex-direction: column;
   position: relative;
@@ -483,10 +495,11 @@ $breakpoint arguments choices:
 }
 .short-about p {
   font-size: 18px;
+  font-weight: 300;
   max-width: 484px;
 }
 .short-about p span {
-  font-weight: 700;
+  font-weight: 600;
   color: #c08b1d;
 }
 
@@ -516,9 +529,20 @@ $breakpoint arguments choices:
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
+@media only screen and (max-width: 37.5em) {
+  .image-grid {
+    margin-top: 3rem;
+  }
+}
 .image-grid img {
   max-width: 110%;
   min-width: 110%;
+}
+@media only screen and (max-width: 37.5em) {
+  .image-grid img {
+    max-width: 698px;
+    min-width: 698px;
+  }
 }
 .image-grid::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
@@ -589,9 +613,9 @@ $breakpoint arguments choices:
   margin: 7.5rem auto 9.375rem auto;
   text-align: center;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .register {
-    display: none;
+    margin: 3rem auto 1.5rem auto;
   }
 }
 .register h3 {
@@ -601,12 +625,24 @@ $breakpoint arguments choices:
   color: #c08b1d;
   margin-bottom: 2.5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .register h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 .register p {
   font-size: 1.25rem;
   line-height: 2.1875rem;
   margin-bottom: 3.125rem;
   max-width: 35rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .register p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
 }
 .register p span {
   color: #c08b1d;
@@ -615,11 +651,6 @@ $breakpoint arguments choices:
   margin: auto;
 }
 
-@media only screen and (max-width: 56.25em) {
-  .theme {
-    margin-top: 5rem;
-  }
-}
 .theme h3 {
   font-size: 2.5rem;
   line-height: 3.3125rem;
@@ -646,7 +677,7 @@ $breakpoint arguments choices:
 }
 @media only screen and (max-width: 75em) {
   .theme-wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 @media only screen and (max-width: 56.25em) {
@@ -664,7 +695,6 @@ $breakpoint arguments choices:
 @media only screen and (max-width: 75em) {
   .theme-wrapper img {
     margin-right: 0;
-    margin-bottom: 3rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -788,6 +818,11 @@ $breakpoint arguments choices:
 .previous-themes {
   margin-top: 7.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .previous-themes {
+    margin-top: 5.5rem;
+  }
+}
 .previous-themes-heading {
   font-size: 2.5rem;
   line-height: 3.3125rem;
@@ -802,7 +837,6 @@ $breakpoint arguments choices:
   .previous-themes-heading {
     font-size: 1.5625rem;
     line-height: 2.1875rem;
-    padding: 0 34px;
   }
 }
 .previous-themes-wrapper {
@@ -837,7 +871,7 @@ $breakpoint arguments choices:
   padding: 0 1.875rem;
   margin-top: -0.5rem;
   border-radius: 0 0 6px 6px;
-  height: 7.1875rem;
+  height: 4.875rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -851,16 +885,23 @@ $breakpoint arguments choices:
   }
 }
 .previous-themes-textbox-primary {
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.875rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 37.5em) {
+  .previous-themes-textbox-primary {
+    font-size: 0.875rem;
+  }
 }
 .previous-themes-textbox-secondary {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 300;
   color: #cfcccc;
-  line-height: 1.40625rem;
   font-family: "Luxury";
+}
+@media only screen and (max-width: 37.5em) {
+  .previous-themes-textbox-secondary {
+    font-size: 1.25rem;
+  }
 }
 
 #old-content {
@@ -880,16 +921,22 @@ $breakpoint arguments choices:
   color: black;
   margin-bottom: 3.125rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .faq h3 {
+    margin-bottom: 1.5rem;
+  }
+}
 .faq-item {
   margin: 6px auto;
   max-width: 48rem;
   border: 1px solid #dedede;
+  border-radius: 6px;
 }
 .faq-button {
   width: 100%;
   background-color: #f3f3f3;
   border: none;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 16px;
   padding: 1.5rem;
   display: flex;
@@ -923,7 +970,7 @@ $breakpoint arguments choices:
 .faq-content {
   font-size: 14px;
   line-height: 23px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0 1.5rem 0 1.5rem;
   color: #939393;
   height: 0;
@@ -959,6 +1006,12 @@ $breakpoint arguments choices:
   margin: 0 auto;
   margin-top: 1.5625rem;
   max-width: 26.6875rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .video-subtext {
+    font-size: 0.875rem;
+    line-height: 1.4375rem;
+  }
 }
 .video-wrapper {
   display: grid;
@@ -1046,14 +1099,14 @@ $breakpoint arguments choices:
 .video-secondary {
   margin-top: 1.25rem;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 2.0625rem;
   color: white;
 }
 @media only screen and (max-width: 37.5em) {
   .video-secondary {
-    font-size: 1.25rem;
-    line-height: 1.875rem;
+    font-size: 0.875rem;
+    line-height: 1.4375rem;
   }
 }
 .video-footer h4 {

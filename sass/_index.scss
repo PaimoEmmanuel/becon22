@@ -204,10 +204,9 @@
     // height: 5rem;
     @include respond(tab-port) {
       overflow: hidden;
-      // height: 3rem;
     }
     @include respond(phone) {
-      // height: 3.5rem;
+      display: block;
     }
     &-wrapper {
       // display: inline-flex;
@@ -237,14 +236,6 @@
       }
     }
     &-bg {
-      //   background: linear-gradient(
-      //     0deg,
-      //     rgba(255, 255, 255, 1) 0%,
-      //     rgba(255, 255, 255, 0) 35%,
-      //     rgba(255, 255, 255, 0) 50%,
-      //     rgba(255, 255, 255, 0) 65%,
-      //     rgba(255, 255, 255, 1) 100%
-      //   );
       position: absolute;
       right: 0;
       top: 0rem;
@@ -352,11 +343,11 @@
   }
   p {
     font-size: 18px;
-    // font-weight: 300;
+    font-weight: 300;
     max-width: 484px;
 
     span {
-      font-weight: 700;
+      font-weight: 600;
       color: #c08b1d;
     }
   }
@@ -382,9 +373,16 @@
   width: 100%;
   overflow-x: scroll;
   margin-top: 112px;
+  @include respond(phone) {
+    margin-top: 3rem;
+  }
   img {
     max-width: 110%;
     min-width: 110%;
+    @include respond(phone) {
+      max-width: 698px;
+      min-width: 698px;
+    }
   }
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
@@ -452,8 +450,8 @@
   max-width: 46.25rem;
   margin: 7.5rem auto 9.375rem auto;
   text-align: center;
-  @include respond(tab-port) {
-    display: none;
+  @include respond(phone) {
+    margin: 3rem auto 1.5rem auto;
   }
   h3 {
     font-size: 3.125rem;
@@ -461,6 +459,10 @@
     font-weight: 700;
     color: #c08b1d;
     margin-bottom: 2.5rem;
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
   }
   p {
     font-size: 1.25rem;
@@ -468,6 +470,10 @@
     margin-bottom: 3.125rem;
     max-width: 35rem;
     margin: 0 auto;
+    @include respond(tab-port) {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+    }
     span {
       color: #c08b1d;
     }
@@ -478,7 +484,7 @@
 }
 .theme {
   @include respond(tab-port) {
-    margin-top: 5rem;
+    // margin-top: 5rem;
   }
   h3 {
     font-size: 2.5rem;
@@ -503,7 +509,7 @@
     max-width: 72.0625rem;
     gap: 3.4375rem;
     @include respond(tab-land) {
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     @include respond(tab-port) {
       margin: 0 auto 0 auto;
@@ -515,7 +521,7 @@
       width: 50%;
       @include respond(tab-land) {
         margin-right: 0;
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
       }
       @include respond(phone) {
         width: 100%;
@@ -617,6 +623,9 @@
 }
 .previous-themes {
   margin-top: 7.5rem;
+  @include respond(phone) {
+    margin-top: 5.5rem;
+  }
   &-heading {
     font-size: 2.5rem;
     line-height: 3.3125rem;
@@ -629,7 +638,7 @@
     @include respond(phone) {
       font-size: 1.5625rem;
       line-height: 2.1875rem;
-      padding: 0 34px;
+      // padding: 0 34px;
     }
   }
   &-wrapper {
@@ -657,7 +666,7 @@
     padding: 0 1.875rem;
     margin-top: -0.5rem;
     border-radius: 0 0 6px 6px;
-    height: 7.1875rem;
+    height: 4.875rem;
     display: flex;
     // flex-direction: column;
     justify-content: space-between;
@@ -669,17 +678,19 @@
       padding: 0 1rem;
     }
     &-primary {
-      font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 1.875rem;
+      font-weight: 600;
+      @include respond(phone) {
+        font-size: 0.875rem;
+      }
     }
     &-secondary {
-      font-size: 20px;
+      font-size: 32px;
       font-weight: 300;
       color: #cfcccc;
-      line-height: 1.40625rem;
-
       font-family: "Luxury";
+      @include respond(phone) {
+        font-size: 1.25rem;
+      }
     }
   }
 }
@@ -695,18 +706,22 @@
   h3 {
     color: black;
     margin-bottom: 3.125rem;
+    @include respond(phone) {
+      margin-bottom: 1.5rem;
+    }
   }
   &-item {
     margin: 6px auto;
     max-width: 48rem;
     border: 1px solid #dedede;
+    border-radius: 6px;
   }
 
   &-button {
     width: 100%;
     background-color: #f3f3f3;
     border: none;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 16px;
     padding: 1.5rem;
     display: flex;
@@ -740,7 +755,7 @@
   &-content {
     font-size: 14px;
     line-height: 23px;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0 1.5rem 0 1.5rem;
     color: #939393;
     height: 0;
@@ -769,6 +784,10 @@
     margin: 0 auto;
     margin-top: 1.5625rem;
     max-width: 26.6875rem;
+    @include respond(phone) {
+      font-size: 0.875rem;
+      line-height: 1.4375rem;
+    }
   }
   &-wrapper {
     display: grid;
@@ -846,12 +865,12 @@
   &-secondary {
     margin-top: 1.25rem;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 2.0625rem;
     color: white;
     @include respond(phone) {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
+      font-size: 0.875rem;
+      line-height: 1.4375rem;
     }
   }
   &-footer {
